@@ -1,0 +1,76 @@
+digraph WidgetSystemArchitecture {
+  rankdir=TB;
+  bgcolor="#f8f9fa";
+  node [shape=box, style="rounded,filled", color="#2c3e50", fontname="Arial", fontsize=9];
+  edge [color="#34495e", fontsize=8];
+
+  // Widget System Layer
+  WidgetSystem [label="Widget System\n(Reusable UI Blocks)", shape=box, style="rounded,filled", fillcolor="#3498db", fontcolor=white, fontsize=11, fontweight=bold];
+  
+  WidgetBase [label="Widget Base\n(Props, State, Layout)"];
+  WidgetRegistry [label="Widget Registry\n(Discovery & Configuration)"];
+  DragDrop [label="Drag & Drop\n(Widget Rearrangement)"];
+  Responsive [label="Responsive Grid\n(12-column layout)"];
+
+  WidgetSystem -> {WidgetBase, WidgetRegistry, DragDrop, Responsive};
+
+  // Widget Categories
+  subgraph cluster_metric_widgets {
+    label = "Metric Widgets";
+    style = filled;
+    fillcolor = "#e8f8f5";
+    color = "#2c3e50";
+    
+    MetricCard [label="MetricCard Widget\n(Value + Trend)"];
+    HealthScore [label="HealthScore Widget\n(1-10 Circle)"];
+    ProgressBar [label="ProgressBar Widget\n(Goal Progress)"];
+  }
+
+  subgraph cluster_chart_widgets {
+    label = "Chart Widgets";
+    style = filled;
+    fillcolor = "#fef5e7";
+    color = "#2c3e50";
+    
+    LineChart [label="LineChart Widget\n(Revenue, Forecast)"];
+    PieChart [label="PieChart Widget\n(Expense Breakdown)"];
+    BarChart [label="BarChart Widget\n(Comparison)"];
+    TimelineChart [label="TimelineChart Widget\n(Milestones)"];
+  }
+
+  subgraph cluster_data_widgets {
+    label = "Data Widgets";
+    style = filled;
+    fillcolor = "#f4ecf7";
+    color = "#2c3e50";
+    
+    TableWidget [label="Table Widget\n(Inventory, Employees)"];
+    ListWidget [label="List Widget\n(Orders, Alerts)"];
+    CardGrid [label="CardGrid Widget\n(Cards in Grid)"];
+  }
+
+  subgraph cluster_interaction_widgets {
+    label = "Interaction Widgets";
+    style = filled;
+    fillcolor = "#e8f4f8";
+    color = "#2c3e50";
+    
+    ChecklistWidget [label="Checklist Widget\n(Tasks)"];
+    FormWidget [label="Form Widget\n(Input Fields)"];
+    TabsWidget [label="Tabs Widget\n(Tab Navigation)"];
+    ButtonGroup [label="ButtonGroup Widget\n(Actions)"];
+  }
+
+  subgraph cluster_composite_widgets {
+    label = "Composite Widgets";
+    style = filled;
+    fillcolor = "#f3e5f5";
+    color = "#2c3e50";
+    
+    AlarmCard [label="AlarmCard Widget\n(Alert + Action)"];
+    RecommendWidget [label="Recommend Widget\n(Rec. + Why + Action)"];
+    GoalCard [label="GoalCard Widget\n(Goal + Progress + Timeline)"];
+  }
+
+  WidgetBase -> {MetricCard, HealthScore, ProgressBar, LineChart, PieChart, BarChart, TimelineChart, TableWidget, ListWidget, CardGrid, ChecklistWidget, FormWidget, TabsWidget, ButtonGroup, AlarmCard, RecommendWidget, GoalCard};
+}

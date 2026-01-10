@@ -1,0 +1,103 @@
+digraph FocusGuidePageWidgets {
+  rankdir=TB;
+  bgcolor="#f0f0f0";
+  node [shape=box, style="rounded,filled", color="#2c3e50", fontname="Arial", fontsize=9];
+  edge [color="transparent"];
+
+  // Header
+  Header [label="FOCUS GUIDE MODULE\n[ Focus Coach] [Day: 45] [Streak: 12 days]", shape=box, style="rounded,filled", fillcolor="#2c3e50", fontcolor=white, width=12, height=0.7];
+
+  // Tab Navigation
+  TabNav [label="[Daily Checklist] [Weekly Review] [Monthly Strategy] [Habit Tracker]", shape=box, style="rounded,filled", fillcolor="#34495e", fontcolor=white, width=12, height=0.6];
+
+  // ============= DAILY CHECKLIST TAB =============
+  subgraph cluster_daily {
+    label = "DAILY CHECKLIST TAB";
+    style = filled;
+    fillcolor = "#f0f0f0";
+    color = "#2c3e50";
+    
+    DailyHeader [label=" TODAY'S PRIORITY TASKS\n(Est. Time: 5-15 min | Streak: 12 days)", shape=box, style="rounded,filled", fillcolor="#16a085", fontcolor=white, width=10, height=0.8];
+
+    ChecklistWidget [label="📋 TASK CHECKLIST WIDGET\n┌──────────────────────────────────────┐\n Task 1: Reconcile Cash Box (5 min)\n   Why? Track real cash vs records\n   💪 Habit Streak: 12 days\n\n Task 2: Check Stock Low Items (3 min)\n   Why? Prevent stock-outs\n   💪 Habit Streak: 8 days\n\n Task 3: Follow Up on Credit (7 min)\n   Why? Reduce overdue payments\n   💪 Habit Streak: 5 days\n\n Task 4: Check Competitor Prices (5 min)\n   Why? Adjust pricing if needed\n   💪 Habit Streak: 3 days\n\n Task 5: Process Today's Orders (5 min)\n   Why? Keep customers happy\n   💪 Habit Streak: 12 days\n──────────────────────────────────────\n[Mark All Complete] [Deep Dive into Focus Guide]", shape=box, style="rounded,filled", fillcolor="#3498db", fontcolor=white, width=10, height=3.5);
+
+    RewardWidget [label="🏆 COMPLETION REWARD\nWhen all tasks completed:\n• +50 Points\n• Streak Counter: +1\n• Badge: 'Daily Master' (if 30-day streak)\n• Leaderboard boost", shape=box, style="rounded,filled", fillcolor="#f39c12", fontcolor=white, width=10, height=1.5);
+  }
+
+  // ============= WEEKLY REVIEW TAB =============
+  subgraph cluster_weekly {
+    label = "WEEKLY REVIEW TAB";
+    style = filled;
+    fillcolor = "#f0f0f0";
+    color = "#2c3e50";
+    
+    WeeklyHeader [label="📊 WEEK 7 REVIEW (Day 43-49)\nThis Week's Theme: 'Cash & Credit Management'", shape=box, style="rounded,filled", fillcolor="#9b59b6", fontcolor=white, width=10, height=0.8];
+
+    PerfWidget [label="📈 THIS WEEK'S PERFORMANCE WIDGET\n┌─────────────────────────────┐\nRevenue:      Rs15,000  vs Target Rs16K | 93% \nGross Profit: Rs3,600   vs Target Rs3.8K | 94% \nNet Profit:   Rs1,350   vs Target Rs1.4K | 96% \nCash Impact:  +Rs800    (healthy position)\nTop 3 Areas: ↑ Demand (+8%), ↓ Cost (-2%), → Margin (23%)\n─────────────────────────────", shape=box, style="rounded,filled", fillcolor="#2ecc71", fontcolor=white, width=10, height=1.8);
+
+    LearnWidget [label="🎓 LEARN THIS WEEK: 'Customer Credit Management'\n┌──────────────────────────────┐\nKey Concept: Giving credit = borrowing from your cash\nReal Impact This Week:\n• You gave Rs3K credit to 5 customers\n• Rs1.5K collected back\n• Net Credit Extended: Rs1.5K (out of your cash)\n\nBest Practice:\n• Give credit only to regular customers\n• Set clear due dates (7-14 days max)\n• Follow up on day 10\n• Consider discounts for early payment\n\n💡 Real MSME Story:\n'I lost Rs50K because I didn't track credit properly'\n──────────────────────────────\n[Read Full Article] [Watch Video]", shape=box, style="rounded,filled", fillcolor="#e74c3c", fontcolor=white, width=10, height=2.5);
+
+    PlanWidget [label="📋 PLAN NEXT WEEK\n┌──────────────────────────────┐\n1. Goal: Collect Rs2K pending credit\n   Action: Call customers on Monday\n\n2. Goal: Reduce stock waste by 10%\n   Action: Reorganize storage, check expiry\n\n3. Goal: Increase repeat customers 5%\n   Action: Offer loyalty bonus on 3rd purchase\n\nPriority Focus Area: Credit Management\nExpected Revenue: Rs16K-Rs18K\nTarget Profit Margin: 9%\n──────────────────────────────\n[Quiz: Test Your Knowledge] [Next Week Plan]", shape=box, style="rounded,filled", fillcolor="#3498db", fontcolor=white, width=10, height=2);
+  }
+
+  // ============= MONTHLY STRATEGY TAB =============
+  subgraph cluster_monthly {
+    label = "MONTHLY STRATEGY TAB";
+    style = filled;
+    fillcolor = "#f0f0f0";
+    color = "#2c3e50";
+    
+    MonthlyHeader [label="🎯 MONTH 2 STRATEGY REVIEW\n(45 days completed, 15 days remaining in simulation)", shape=box, style="rounded,filled", fillcolor="#c0392b", fontcolor=white, width=10, height=0.8];
+
+    MonthReviewWidget [label="📊 MONTH IN REVIEW WIDGET\n┌──────────────────────────────────┐\nRevenue:         Rs42K   vs Target Rs40K   | 105%  EXCEEDED\nGross Profit:    Rs10.2K vs Target Rs9.6K | 106%  EXCEEDED\nNet Profit:      Rs3.8K  vs Target Rs3.6K | 105%  EXCEEDED\nCash Position:   Rs85K   (healthy)\nCustomers:       285    (+15 this month)\nRepeat Rate:     72%    (excellent)\n\nBenchmark vs Real MSMEs (Kirana):\n You're AHEAD on profit margin (9% vs 8% avg)\n You're AHEAD on cash management\n You're AT par on inventory turnover\n You're BEHIND on customer count (should have 350)\n──────────────────────────────────", shape=box, style="rounded,filled", fillcolor="#1abc9c", fontcolor=white, width=10, height=2.5);
+
+    HealthCheckWidget [label="💚 HEALTH CHECK WIDGET\n┌──────────────────────────────┐\nArea 1: Inventory Management\n  Score: 8/10 | You're managing well\n  Improve: Reduce fast-moving stock to free up cash\n\nArea 2: Financial Discipline\n  Score: 9/10 | Excellent tracking\n  Improve: Setup automatic expense alerts\n\nArea 3: Customer Management\n  Score: 7/10 | Good but room to grow\n  Improve: Implement loyalty program\n\nArea 4: Tax Compliance\n  Score: 10/10 | Perfect\n  Improve: Plan for GST filing (due in 2 weeks)\n\nOverall Business Health: 8.5/10 📈 EXCELLENT\n──────────────────────────────", shape=box, style="rounded,filled", fillcolor="#27ae60", fontcolor=white, width=10, height=2.5);
+
+    PlanNextMonthWidget [label="📅 PLAN FOR MONTH 3\n┌──────────────────────────────┐\nRevenue Target:     Rs45K (increased 7%)\nProfit Target:      9.5% (slight improvement)\nNew Initiatives:\n  1. Launch loyalty program (5% discount on 10 purchases)\n  2. Add 50 new customers (via word-of-mouth)\n  3. Reduce COGS by 2% (supplier negotiations)\n  4. Improve inventory turnover by 5%\n\nRisk Factors:\n  • Price volatility (commodity prices may spike)\n  • Seasonal demand (post-season slowdown)\n  • Competitor action (price wars)\n\nMitigation:\n  • Keep 15 days of cash reserve\n  • Build loyalty early\n  • Negotiate long-term supplier contracts\n──────────────────────────────", shape=box, style="rounded,filled", fillcolor="#8e44ad", fontcolor=white, width=10, height=2.3);
+
+    ExpertInsightsWidget [label="🌟 EXPERT INSIGHTS\n┌──────────────────────────────┐\nHow You Compare to Real MSMEs:\n\n💪 Your Strengths:\n  • Cash management discipline (better than 80% of MSMEs)\n  • Profit margin (9% vs 7% average)\n  • Customer retention (72% vs 60% average)\n\n Growth Opportunities:\n  • Expand customer base (you have capacity)\n  • Reduce COGS through bulk orders\n  • Implement pricing strategy (currently reactive)\n\n Ready for Reality?\n  Yes! You've learned:\n   Daily operations management\n   Financial tracking\n   Customer credit management\n   Tax awareness\n   Decision-making under constraints\n──────────────────────────────\n[Download Certificate] [Start Another Business]", shape=box, style="rounded,filled", fillcolor="#16a085", fontcolor=white, width=10, height=2.5);
+  }
+
+  // ============= HABIT TRACKER TAB =============
+  subgraph cluster_habits {
+    label = "HABIT TRACKER TAB";
+    style = filled;
+    fillcolor = "#f0f0f0";
+    color = "#2c3e50";
+    
+    HabitsHeader [label="🎖️ HABIT TRACKER - YOUR PROGRESS", shape=box, style="rounded,filled", fillcolor="#f39c12", fontcolor=white, width=10, height=0.6];
+
+    StreaksWidget [label="🔥 STREAKS DISPLAY WIDGET\n┌────────────────────────────────┐\n🔥 Login Streak:        45 days (MAX! 🏆)\n🔥 Daily Checklist:     12 days ( Great!)\n🔥 Weekly Review:       8 weeks ( Awesome!)\n🔥 Smart Decisions:     25 days (Way to go!)\n🔥 Tax Compliance:      60 days (Perfect!)\n\n[Share Streak] [View Calendar]", shape=box, style="rounded,filled", fillcolor="#e74c3c", fontcolor=white, width=10, height=1.8);
+
+    BadgesWidget [label="🏅 BADGES & ACHIEVEMENTS WIDGET\n┌─────────────────────────────────────┐\n🥇 EARNED BADGES:\n   'Business Starter' - Started 1st simulation\n   'First Profit' - Made Rs1K profit\n   'Financial Wizard' - Tracked all transactions\n   'Tax Master' - GST-compliant for full month\n   'Growth Hacker' - 2x revenue in month 2\n   'Customer Champion' - 72% repeat customer rate\n\n🔓 LOCKED BADGES:\n  ⏳ 'Millionaire' - Make Rs1L profit (Rs380K remaining)\n  ⏳ 'Multi-Business' - Run 3 different business types\n  ⏳ 'Market Leader' - Get 50% market share\n  ⏳ '1-Year Legend' - Complete 12-month simulation\n─────────────────────────────────────", shape=box, style="rounded,filled", fillcolor="#3498db", fontcolor=white, width=10, height=2.3);
+
+    LeaderboardWidget [label="🏆 LEADERBOARD WIDGET (Optional Social)\n┌──────────────────────────────┐\n1. 🥇 Priya_Sharma (Rs1.2M profit)   [Kirana Store]\n2. 🥈 Raj_Kumar (Rs980K profit)      [Printing Press]\n3. 🥉 Neha_Singh (Rs850K profit)     [Salon]\n...\n15. 🎯 You: Rs380K profit            [Kirana Store]\n    Rank: Top 8% | Points: 4,200\n\nThis Month Leader: Arjun_Patel (↑ 15% growth)\n──────────────────────────────\n[View All] [Share My Score]", shape=box, style="rounded,filled", fillcolor="#2ecc71", fontcolor=white, width=10, height=1.8);
+  }
+
+  // Layout arrangement
+  Header -> TabNav;
+  
+  // Daily tab
+  TabNav -> DailyHeader;
+  DailyHeader -> ChecklistWidget;
+  ChecklistWidget -> RewardWidget;
+  
+  // Weekly tab
+  TabNav -> WeeklyHeader;
+  WeeklyHeader -> PerfWidget;
+  PerfWidget -> LearnWidget;
+  LearnWidget -> PlanWidget;
+  
+  // Monthly tab
+  TabNav -> MonthlyHeader;
+  MonthlyHeader -> MonthReviewWidget;
+  MonthReviewWidget -> HealthCheckWidget;
+  HealthCheckWidget -> PlanNextMonthWidget;
+  PlanNextMonthWidget -> ExpertInsightsWidget;
+  
+  // Habits tab
+  TabNav -> HabitsHeader;
+  HabitsHeader -> StreaksWidget;
+  StreaksWidget -> BadgesWidget;
+  BadgesWidget -> LeaderboardWidget;
+}

@@ -1,0 +1,93 @@
+digraph SimulationPageWidgets {
+  rankdir=TB;
+  bgcolor="#f0f0f0";
+  node [shape=box, style="rounded,filled", color="#2c3e50", fontname="Arial", fontsize=9];
+  edge [color="transparent"];
+
+  // Header
+  Header [label="SIMULATION HEADER\n[⏯️ Play] [⏸️ Pause] [⏭️ Speed: 1x/2x/4x] [Day: 45] [Week: 7] [Month: 2]", shape=box, style="rounded,filled", fillcolor="#2c3e50", fontcolor=white, width=12, height=0.8];
+
+  // Tab Navigation
+  TabNav [label="TABS: [Operations] [Market] [Finance] [Tax]", shape=box, style="rounded,filled", fillcolor="#34495e", fontcolor=white, width=12, height=0.6];
+
+  // ============= OPERATIONS TAB LAYOUT =============
+  subgraph cluster_operations {
+    label = "OPERATIONS TAB";
+    style = filled;
+    fillcolor = "#f0f0f0";
+    color = "#2c3e50";
+    
+    // Inventory Widget
+    InventoryWidget [label="📦 INVENTORY MANAGER WIDGET\n\n Item     Qty   Reorder  Status\n\n Rice     250kg  100kg   ✓ OK\n Oil      50L    20L     ⚠️ Low\n Sugar    150kg  50kg    ✓ OK\n Salt     25kg   10kg    🔴 Critical\n\n[Reorder] [Edit] [View Deliveries]", shape=box, style="rounded,filled", fillcolor="#3498db", fontcolor=white, width=4, height=2.2];
+
+    // Employees Widget
+    EmployeeWidget [label="👥 EMPLOYEE PANEL WIDGET\n\n Name     Salary   Productivity\n\n Raj      Rs8K     95% ⭐\n Priya    Rs8K     85% 👍\n Amit     Rs6K     70% ⚠️\n Payroll: Rs22K/mo (8% of Revenue)\n\n[Hire New] [View Details]", shape=box, style="rounded,filled", fillcolor="#9b59b6", fontcolor=white, width=4, height=2.2];
+
+    // Order Queue Widget
+    OrderWidget [label="📋 ORDER QUEUE WIDGET\n\n Customer Items Status Days\n\n Vikram   5kg   ✓ Done 0\n Sneha    2kg   🔄 Proc 1\n Rahul    3kg   ⏳ Wait 2\n On-time: 95% | Pending: 2\n\n[Manage] [View Details]", shape=box, style="rounded,filled", fillcolor="#e74c3c", fontcolor=white, width=4, height=2.2];
+  }
+
+  // ============= MARKET TAB LAYOUT =============
+  subgraph cluster_market {
+    label = "MARKET TAB";
+    style = filled;
+    fillcolor = "#f0f0f0";
+    color = "#2c3e50";
+    
+    // Price Chart Widget
+    PriceChartWidget [label="PRICE CHART WIDGET\n[7-day line chart]\nToday: Rs45/kg\nTrend: +2%\nBuy: Rs42 | Sell: Rs48\nYour Margin: Rs6/kg (13%)\n[Commodity Selector]", shape=box, style="rounded,filled", fillcolor="#f39c12", fontcolor=white, width=4, height=1.8];
+
+    // Competitor Widget
+    CompetitorWidget [label="COMPETITORS WIDGET\nCompetitor | Price | Activity\nStore A    | Rs44  | Price down\nStore B    | Rs46  | No change\nMarket Share: You 22%, A 35%, B 43%\n[Your Position: Good]", shape=box, style="rounded,filled", fillcolor="#16a085", fontcolor=white, width=4, height=1.8];
+
+    // Demand Widget
+    DemandWidget [label="DEMAND GRAPH WIDGET\n[30-day trend line]\nCurrent: 150 units/day\nTrend: +5%\nPeak Hours: 6-8 AM, 6-9 PM\nCustomers: 285 | Repeat: 72%\nPrice Elasticity: -1.2", shape=box, style="rounded,filled", fillcolor="#8e44ad", fontcolor=white, width=4, height=1.8];
+  }
+
+  // ============= FINANCE TAB LAYOUT =============
+  subgraph cluster_finance {
+    label = "FINANCE TAB";
+    style = filled;
+    fillcolor = "#f0f0f0";
+    color = "#2c3e50";
+    
+    // Income Statement Widget
+    IncomeWidget [label="📊 INCOME STATEMENT WIDGET (Month)\n\nRevenue              Rs2.1L (100%)\n- COGS               Rs1.6L (76%)\n━━━━━━━━━━━━━━━━━━━━\nGross Profit         Rs0.5L (24%)\n- Operating Exp.     Rs0.22L\n  Salary Rs0.22L, Rent Rs0L\n━━━━━━━━━━━━━━━━━━━━\nNet Profit           Rs0.18L (9%)\n┌ Target: 9% ✓ On Track\n", shape=box, style="rounded,filled", fillcolor="#2ecc71", fontcolor=white, width=4, height=2.2);
+
+    // Expense Breakdown Widget
+    ExpenseWidget [label="🍰 EXPENSE PIE CHART WIDGET\n\n COGS  76%    ████████\n Staff  10%   ██\n Rent   5%    █\n Other  9%    █\n\nTotal Expenses: Rs1.82L\n[Drill Down by Category]", shape=box, style="rounded,filled", fillcolor="#3498db", fontcolor=white, width=4, height=1.8);
+
+    // Cash Flow Widget
+    CashFlowWidget [label="💰 CASH FLOW WIDGET\n[30-day line chart]\nCurrent Cash: Rs85K\nDaily Burn: -Rs2K (expense > revenue)\nProjected Runway: 42 days\nBreak-even: Day 28 ✓\n🟢 Cash Health: Good", shape=box, style="rounded,filled", fillcolor="#1abc9c", fontcolor=white, width=4, height=1.8];
+  }
+
+  // ============= TAX TAB LAYOUT =============
+  subgraph cluster_tax {
+    label = "TAX TAB";
+    style = filled;
+    fillcolor = "#f0f0f0";
+    color = "#2c3e50";
+    
+    // Tax Calculator Widget
+    TaxWidget [label="🏛️ TAX CALCULATOR WIDGET\nYTD Turnover: Rs8.2L\nGST Rate: 5%\nGST Liability: Rs0.41L\nIncome Tax: ~Rs0.08L (Est.)\nProf. Tax: Rs0\nTotal Tax: Rs0.49L (6%)\n[Tax Scenarios] [File GST]", shape=box, style="rounded,filled", fillcolor="#c0392b", fontcolor=white, width=4, height=2);
+
+    // Tax Calendar Widget
+    CalendarWidget [label="📅 TAX CALENDAR WIDGET\n\n EVENT       DUE   Days\n\n GST (GSTR-1) 15 Jan 5 ⚠️\n Income Tax   31 Mar 80\n Professional 15 Mar 65\n\n[Set Reminders] [View History]", shape=box, style="rounded,filled", fillcolor="#e67e22", fontcolor=white, width=4, height=1.8);
+
+    // Compliance Widget
+    ComplianceWidget [label="✅ COMPLIANCE CHECKLIST\n☑️ GST Registration: Done\n☑️ Business License: Done\n☑️ Tax ID: Done\n⚠️ GST Return: Due in 5 days\n⏳ Income Tax: 80 days\nCompliance Score: 95%", shape=box, style="rounded,filled", fillcolor="#27ae60", fontcolor=white, width=4, height=1.8];
+  }
+
+  // Layout arrangement
+  Header -> TabNav;
+  TabNav -> {InventoryWidget, EmployeeWidget, OrderWidget};
+  TabNav -> {PriceChartWidget, CompetitorWidget, DemandWidget};
+  TabNav -> {IncomeWidget, ExpenseWidget, CashFlowWidget};
+  TabNav -> {TaxWidget, CalendarWidget, ComplianceWidget};
+
+  // Spatial arrangement
+  {rank=same; InventoryWidget EmployeeWidget OrderWidget};
+  {rank=same; PriceChartWidget CompetitorWidget DemandWidget};
+  {rank=same; IncomeWidget ExpenseWidget CashFlowWidget};
+  {rank=same; TaxWidget CalendarWidget ComplianceWidget};
+}

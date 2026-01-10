@@ -1,0 +1,55 @@
+digraph DashboardPageLayout {
+  rankdir=TB;
+  bgcolor="#f0f0f0";
+  node [shape=box, style="rounded,filled", color="#2c3e50", fontname="Arial", fontsize=9];
+  edge [color="transparent"];
+
+  // Header
+  Header [label="HEADER BAR\n[Logo] [Business Name] [Day/Week/Month] [User Menu]", shape=box, style="rounded,filled", fillcolor="#2c3e50", fontcolor=white, width=12, height=0.8];
+
+  // Sidebar
+  Sidebar [label="SIDEBAR\n• Dashboard\n• Simulation\n• Analytics\n• Goals\n• Profile", shape=box, style="rounded,filled", fillcolor="#34495e", fontcolor=white, width=1.5, height=8];
+
+  // Main Content Area
+  MainContent [label="MAIN CONTENT AREA (12-column grid, responsive)", shape=box, style="rounded", width=10, height=0.5];
+
+  // Row 1: Health Score + Alerts (6col each)
+  HealthWidget [label="📊 HEALTH SCORE WIDGET\n[1-10 Circle]\n[Status Text]\n[3 Indicators]", shape=box, style="rounded,filled", fillcolor="#e74c3c", fontcolor=white, width=4, height=1.5];
+  AlertsWidget [label=" ALERTS WIDGET\n[Critical Alert 1]\n[Warning Alert 2]\n[Info Alert 3]\n[View All Link]", shape=box, style="rounded,filled", fillcolor="#e67e22", fontcolor=white, width=4, height=1.5];
+
+  // Row 2: Metrics (3col each, 4 cards)
+  RevenueMetric [label="💰 REVENUE\nRs2.1L\n↑ 12%\nvs Avg", shape=box, style="rounded,filled", fillcolor="#3498db", fontcolor=white, width=2.5, height=1.2];
+  CashMetric [label="💵 CASH\nRs85K\n Healthy\nvs Avg", shape=box, style="rounded,filled", fillcolor="#2ecc71", fontcolor=white, width=2.5, height=1.2];
+  InventoryMetric [label="📦 INVENTORY\nRs45K\n Medium\nvs Avg", shape=box, style="rounded,filled", fillcolor="#f39c12", fontcolor=white, width=2.5, height=1.2];
+  MarginMetric [label="📈 MARGIN\n23%\n↓ -1%\nvs Avg", shape=box, style="rounded,filled", fillcolor="#9b59b6", fontcolor=white, width=2.5, height=1.2];
+
+  // Row 3: Daily Focus (full width 12col)
+  FocusWidget [label=" TODAY'S FOCUS (Checklist Widget)\n Task 1: Reconcile cash (5 min)\n Task 2: Check stock low items (3 min)\n Task 3: Follow up on credit (7 min)\n Task 4: Check competitor prices (5 min)\n Task 5: Process today's orders (5 min)\n[Mark All] [Deep Dive Link] [Streak: 12 days]", shape=box, style="rounded,filled", fillcolor="#16a085", fontcolor=white, width=10, height=1.8];
+
+  // Row 4: Forecast + Recommendations (6col each)
+  ForecastWidget [label="📊 4-WEEK FORECAST (Line Chart Widget)\n[Chart showing revenue projection]\n[Scenario buttons: Base | Optimistic | Pessimistic]\n[Export button]", shape=box, style="rounded,filled", fillcolor="#8e44ad", fontcolor=white, width=4.5, height=1.6];
+  RecommendWidget [label="💡 RECOMMENDATIONS (Rec Widget)\n🔴 URGENT: Margin 23% vs 24% avg\n   → Negotiate with suppliers\n🟡 WARNING: Stock low on 3 items\n   → Reorder soon\n🔵 INFO: Demand ↑ 15% next week\n   → Plan inventory accordingly", shape=box, style="rounded,filled", fillcolor="#c0392b", fontcolor=white, width=4.5, height=1.6];
+
+  // Row 5: Goals (full width)
+  GoalsWidget [label="🎯 PROFITABILITY GOALS & MILESTONES (Composite Widget)\n[Revenue Target: Rs2.5L/mo] [Progress: 84%] ████████░\n[Profit Target: 9% margin] [Progress: 93%] █████████\n[Milestone Timeline: M1  | M3  | M6 🔄 | M12 ⏳]\n[View Full Goals Dashboard]", shape=box, style="rounded,filled", fillcolor="#16a085", fontcolor=white, width=10, height=1.6];
+
+  // Row 6: CTA
+  CTAWidget [label="[Enter Simulation] [View Focus Guide] [View Analytics] [Settings]", shape=box, style="rounded,filled", fillcolor="#34495e", fontcolor=white, width=10, height=0.7];
+
+  // Layout Connections
+  Header -> MainContent;
+  MainContent -> {HealthWidget, AlertsWidget};
+  MainContent -> {RevenueMetric, CashMetric, InventoryMetric, MarginMetric};
+  MainContent -> FocusWidget;
+  MainContent -> {ForecastWidget, RecommendWidget};
+  MainContent -> GoalsWidget;
+  MainContent -> CTAWidget;
+
+  // Spatial arrangement (invisible edges for layout)
+  {rank=same; HealthWidget AlertsWidget};
+  {rank=same; RevenueMetric CashMetric InventoryMetric MarginMetric};
+  {rank=same; ForecastWidget RecommendWidget};
+
+  // Legend
+  Legend [label="WIDGET COMPOSITION\n━━━━━━━━━━\nMetric Widget: Value + Trend + Benchmark\nChart Widget: Data visualization + Controls\nComposite Widget: Multiple sub-widgets\nChecklist Widget: Task items + Progress\nRecommendation Widget: Priority + Action", shape=box, style="rounded,filled", fillcolor="#ecf0f1", width=6, height=2];
+}

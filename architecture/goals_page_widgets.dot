@@ -1,0 +1,67 @@
+digraph GoalsPageWidgets {
+  rankdir=TB;
+  bgcolor="#f0f0f0";
+  node [shape=box, style="rounded,filled", color="#2c3e50", fontname="Arial", fontsize=9];
+  edge [color="transparent"];
+
+  // Header
+  Header [label="PROFITABILITY GOALS & MILESTONES DASHBOARD\n[Kirana Store Simulation] [Day: 45 of 365]", shape=box, style="rounded,filled", fillcolor="#2c3e50", fontcolor=white, width=12, height=0.8];
+
+  // Main Content Area
+  MainContent [label="GOALS PAGE - 12 COLUMN GRID LAYOUT", shape=box, style="rounded", width=10, height=0.5];
+
+  // ============= ROW 1: GOALS LIST =============
+  GoalsHeader [label="🎯 YOUR PROFITABILITY GOALS", shape=box, style="rounded,filled", fillcolor="#8e44ad", fontcolor=white, width=10, height=0.6];
+
+  // Individual Goal Cards
+  RevenueGoal [label="💰 ANNUAL REVENUE TARGET\nGoal: Rs30,00,000 (Year 1)\nCurrent: Rs2,10,000 (45 days)\nProgress: 7% [████░░░░░░]\nPace: ON TRACK \n If maintained: Rs29.5L by year-end\nBenchmark: Rs28L (industry avg)\nYour Status: BEATING AVERAGE", shape=box, style="rounded,filled", fillcolor="#3498db", fontcolor=white, width=3, height=2);
+
+  ProfitGoal [label="📈 NET PROFIT MARGIN TARGET\nGoal: 9% (Year 1)\nCurrent: 9.0% (month 2)\nProgress: 100% [██████████]\nStatus: ON TARGET \n💡 This means:\n• Rs27,000 profit per Rs3L revenue\n• Rs2.7L annual profit potential\nBenchmark: 8% (industry avg)\nYour Status: ABOVE AVERAGE", shape=box, style="rounded,filled", fillcolor="#2ecc71", fontcolor=white, width=3, height=2);
+
+  CashGoal [label="💵 CASH RESERVE TARGET\nGoal: 15 days of expenses\nCurrent: 42 days of expenses \nProgress: 280% [████████████]\nStatus: EXCELLENT \n🎯 Strong Position:\n• Cash: Rs85K\n• Daily Expenses: Rs2K\n• Runway: 42 days (need 15)\nRisk: VERY LOW\nNext: Deploy excess to growth", shape=box, style="rounded,filled", fillcolor="#1abc9c", fontcolor=white, width=3, height=2);
+
+  CustomerGoal [label="👥 CUSTOMER COUNT TARGET\nGoal: 500 by year-end\nCurrent: 285 customers\nProgress: 57% [██████░░░░]\nPace: BEHIND by 15 customers \n📊 Current Rate:\n• 6.3 customers/day added\n• Need 4.7 customers/day\n• Catch-up needed: 5 days\nAction: Boost via loyalty program", shape=box, style="rounded,filled", fillcolor="#f39c12", fontcolor=white, width=3, height=2);
+
+  // ============= ROW 2: MILESTONE TIMELINE =============
+  MilestoneHeader [label="📅 MILESTONE TIMELINE (4 Progressive Phases)", shape=box, style="rounded,filled", fillcolor="#16a085", fontcolor=white, width=10, height=0.6];
+
+  Milestone1 [label="🎯 MILESTONE 1: MONTH 1\n ACHIEVED (Day 30)\n━━━━━━━━━━━━━━━━━━\nTarget: Rs1,50,000 Revenue\nActual: Rs1,52,000  EXCEEDED\n\nSub-targets:\n Break-even: Day 25 (target: 30)\n Profit: Rs10,500 (target: Rs9,000)\n Customers: 100+ (target: 80)\n Margin: 23% (target: 22%)\n\nKey Learning:\nFast execution on opening day\nneeds aggressive marketing", shape=box, style="rounded,filled", fillcolor="#27ae60", fontcolor=white, width=2.2, height=2.5);
+
+  Milestone3 [label="🎯 MILESTONE 2: MONTH 3\n IN PROGRESS (Day 45/90)\n━━━━━━━━━━━━━━━━━━\nTarget: Rs2,00,000 Revenue\nCurrent: Rs2,10,000  ON TRACK\n\nSub-targets:\n Gross Profit: Rs50,400 (24%)\n Net Profit: Rs18,900 (9%)\n Customers: 285 (target: 250)\n Repeat Rate: 72% (target: 60%)\n\nKey Learning:\nRepeat customer loyalty\nmore valuable than new", shape=box, style="rounded,filled", fillcolor="#f39c12", fontcolor=white, width=2.2, height=2.5);
+
+  Milestone6 [label="🎯 MILESTONE 3: MONTH 6\n⏳ UPCOMING (Day 180/365)\n━━━━━━━━━━━━━━━━━━\nTarget: Rs2,50,000/month\n\nSub-targets (Projected):\n⏳ Gross Profit: 24% margin\n⏳ Net Profit: 9% margin\n⏳ Customers: 400+\n⏳ Repeat Rate: 75%+\n\nKey Challenge:\nMaintaining margins while\nscaling customer base", shape=box, style="rounded,filled", fillcolor="#3498db", fontcolor=white, width=2.2, height=2.5);
+
+  Milestone12 [label="🎯 MILESTONE 4: YEAR 1\n⏳ FINAL (Day 365/365)\n━━━━━━━━━━━━━━━━━━\nTarget: Rs30,00,000 Annual\n(Rs2.5L/month average)\n\nSub-targets (Final):\n⏳ Gross Profit: Rs7,20,000 (24%)\n⏳ Net Profit: Rs2,70,000 (9%)\n⏳ Customers: 500\n⏳ Repeat Rate: 75%+\n\nReady for Real Business?\n Operations expertise\n Financial discipline\n Customer management", shape=box, style="rounded,filled", fillcolor="#9b59b6", fontcolor=white, width=2.2, height=2.5);
+
+  // ============= ROW 3: BENCHMARK COMPARISON =============
+  BenchmarkHeader [label="📊 BENCHMARK COMPARISON (Your Performance vs Real MSMEs)", shape=box, style="rounded,filled", fillcolor="#c0392b", fontcolor=white, width=10, height=0.6];
+
+  BenchmarkWidget [label="🏅 COMPARISON TABLE WIDGET\n┌────────────────────────────────────────────┐\n Metric            You     Avg     Top 25%  Status\n────────────────────────────────────────────\n Revenue/Month     Rs2.1L   Rs2.0L   Rs2.8L     Good\n Gross Margin      24%     23%     26%       Above\n Net Margin        9%      8%      11%       Above\n Customer Count    285     320     450       Below\n Repeat Rate       72%     60%     80%       Good\n Inventory Days    12      14      10        Good\n Credit Days       5       8       3         Better\n Cash Days         42      25      50        Better\n Staff Turnover    0%      15%     5%        Better\n Customer Acq.     6.3/d   5.5/d   8.2/d     Good\n────────────────────────────────────────────\nOverall Ranking: You're in TOP 35% of Kirana stores! 🌟", shape=box, style="rounded,filled", fillcolor="#2ecc71", fontcolor=white, width=10, height=2.8);
+
+  // ============= ROW 4: PROGRESS DASHBOARD =============
+  ProgressHeader [label="📈 OVERALL PROGRESS & INSIGHTS", shape=box, style="rounded,filled", fillcolor="#1abc9c", fontcolor=white, width=10, height=0.6];
+
+  ProgressWidget [label="🎯 PROGRESS DASHBOARD WIDGET\n┌────────────────────────────────────────┐\nGOAL COMPLETION SUMMARY:\n\n🟢 AHEAD (1 goal):\n    Revenue: 105% of pace\n    Profit Margin: 100% on target\n    Cash Position: 280% of target\n    Repeat Customers: 120% of pace\n\n🟡 BEHIND (1 goal):\n    Customer Count: 92% of pace\n   Action: Launch referral program\n\n🟢 OVERALL PROGRESS:\n   ▓▓▓▓▓▓▓▓░░ 80% (Excellent)\n   \nKEY METRICS THIS MONTH:\n   Revenue Growth: +8% MoM\n   Profit Growth: +12% MoM\n   Customer Growth: +15 new\n   Repeat Growth: +3%\n   \nFORECAST:\n   At current pace, you'll EXCEED\n   revenue target by 5% by year-end!\n────────────────────────────────────────\n[Download Report] [Share Progress]", shape=box, style="rounded,filled", fillcolor="#3498db", fontcolor=white, width=10, height=2.8);
+
+  // ============= ROW 5: ACTION ITEMS =============
+  ActionHeader [label="⚡ RECOMMENDED ACTIONS TO STAY ON TRACK", shape=box, style="rounded,filled", fillcolor="#e67e22", fontcolor=white, width=10, height=0.6];
+
+  ActionWidget [label="📋 ACTION ITEMS WIDGET\n┌──────────────────────────────────┐\n🔴 PRIORITY 1 (This Week):\n   Action: Launch customer loyalty program\n   Goal Impact: +50 customers in M3\n   Expected ROI: Rs5K additional revenue\n   Time: 2 hours setup\n\n🟡 PRIORITY 2 (This Month):\n   Action: Negotiate bulk discount with 2 suppliers\n   Goal Impact: -2% COGS, +1% margin\n   Expected Savings: Rs4.2K/month\n   Time: 1 hour per supplier\n\n🟢 PRIORITY 3 (Next Month):\n   Action: Implement customer feedback system\n   Goal Impact: Improve repeat rate to 75%\n   Expected Impact: +5 more repeat customers\n   Time: 1 hour\n\n📊 OPTIONAL:\n   Expand product line (5 new SKUs)\n   Expected Revenue Impact: +15%\n   Risk: Increased complexity\n──────────────────────────────────", shape=box, style="rounded,filled", fillcolor="#e74c3c", fontcolor=white, width=10, height=2.5);
+
+  // Layout arrangement
+  Header -> MainContent;
+  MainContent -> GoalsHeader;
+  GoalsHeader -> {RevenueGoal, ProfitGoal, CashGoal, CustomerGoal};
+  MainContent -> MilestoneHeader;
+  MilestoneHeader -> {Milestone1, Milestone3, Milestone6, Milestone12};
+  MainContent -> BenchmarkHeader;
+  BenchmarkHeader -> BenchmarkWidget;
+  MainContent -> ProgressHeader;
+  ProgressHeader -> ProgressWidget;
+  MainContent -> ActionHeader;
+  ActionHeader -> ActionWidget;
+
+  // Spatial arrangement
+  {rank=same; RevenueGoal ProfitGoal CashGoal CustomerGoal};
+  {rank=same; Milestone1 Milestone3 Milestone6 Milestone12};
+}

@@ -1,0 +1,243 @@
+digraph FrontendArchitecture {
+  rankdir=TB;
+  bgcolor="#f8f9fa";
+  node [shape=box, style=rounded, color="#2c3e50", fontname="Arial", fontsize=10];
+  edge [color="#34495e", fontsize=9];
+
+  // ============================================================================
+  // LAYER 0: APP SHELL & ROUTING
+  // ============================================================================
+  AppShell [label="App Shell\n(Auth, Navigation, Themes)", shape=box, style="rounded,filled", fillcolor="#3498db", fontcolor=white, fontsize=11, fontweight=bold];
+  
+  Router [label="React Router\n(URL Navigation)"];
+  AuthGuard [label="Auth Guard\n(Login Required)"];
+  
+  AppShell -> Router;
+  Router -> AuthGuard;
+
+  // ============================================================================
+  // LAYER 1: MAIN ROUTES
+  // ============================================================================
+  subgraph cluster_routes {
+    label = "Main Routes";
+    style = filled;
+    fillcolor = "#ecf0f1";
+    color = "#2c3e50";
+    
+    Landing [label="Landing Page\n(Marketing/CTA)", shape=box];
+    Auth [label="Authentication\n(Login/Register)", shape=box];
+    Onboarding [label="Onboarding Flow\n(Setup Wizard)", shape=box];
+    Dashboard [label="Main Dashboard\n(Hub)", shape=box];
+    Simulation [label="Simulation Arena\n(Business Ops)", shape=box];
+    Analytics [label="Analytics View\n(Reports)", shape=box];
+    Profile [label="Profile & Settings", shape=box];
+  }
+
+  AuthGuard -> {Landing, Auth};
+  Router -> Dashboard;
+  Router -> Simulation;
+  Router -> Analytics;
+  Router -> Profile;
+
+  // ============================================================================
+  // LAYER 2: DASHBOARD COMPONENTS
+  // ============================================================================
+  subgraph cluster_dashboard {
+    label = "Dashboard Components";
+    style = filled;
+    fillcolor = "#e8f8f5";
+    color = "#2c3e50";
+    
+    DashHeader [label="Header\n(Logo, User, Logout)"];
+    NavSidebar [label="Sidebar Navigation\n(Menu, Business Select)"];
+    DashGrid [label="Grid Layout\n(Responsive)"];
+    
+    HealthScore [label="Business Health\nScore Card"];
+    MetricsRow [label="Key Metrics\n(Revenue, Cash, Inventory)"];
+    AlertsPanel [label="Alerts Panel\n(Critical, Warnings)"];
+    ForecastCard [label="4-Week Forecast\n(Chart)", shape=box];
+    RecommendCard [label="Recommendations\n(Action Items)"];
+    FocusGuideCard [label="Today's Focus\nGuide Card"];
+    GoalsCard [label="Profitability Goals\nProgress"];
+  }
+
+  Dashboard -> {DashHeader, NavSidebar, DashGrid};
+  DashGrid -> {HealthScore, MetricsRow, AlertsPanel, ForecastCard, RecommendCard, FocusGuideCard, GoalsCard};
+
+  // ============================================================================
+  // LAYER 3: SIMULATION COMPONENTS
+  // ============================================================================
+  subgraph cluster_simulation {
+    label = "Simulation Components";
+    style = filled;
+    fillcolor = "#fef5e7";
+    color = "#2c3e50";
+    
+    SimHeader [label="Time Control\n(Play, Pause, Speed)"];
+    SimNav [label="Simulation Tabs\n(Operations, Market, Finance, Tax)"];
+    
+    OperationsView [label="Operations Tab\n(Inventory, Staff, Orders)"];
+    MarketView [label="Market Tab\n(Prices, Demand, Competitors)"];
+    FinanceView [label="Finance Tab\n(Income, Expenses, Profit)"];
+    TaxView [label="Tax Tab\n(GST, Income Tax, Compliance)"];
+    
+    InventoryMgmt [label="Inventory Manager\n(Stock, Reorder)"];
+    EmployeePanel [label="Employee Panel\n(Hire, Manage)"];
+    OrderQueue [label="Order Queue\n(Incoming, Processing)"];
+    PriceChart [label="Price Chart\n(Commodity Prices)"];
+    CompetitorList [label="Competitor List\n(Activity Feed)"];
+    CustomerDemand [label="Demand Graph\n(Trending)"];
+    IncomeStmt [label="Income Statement\n(Month, Year)"];
+    ExpenseBreakdown [label="Expense Breakdown\n(Chart)"];
+    CashFlow [label="Cash Flow Timeline\n(Projection)"];
+    TaxCalculator [label="Tax Calculator\n(Liability)"];
+    TaxCalendar [label="Tax Calendar\n(Due Dates)"];
+  }
+
+  Simulation -> {SimHeader, SimNav};
+  SimNav -> {OperationsView, MarketView, FinanceView, TaxView};
+  OperationsView -> {InventoryMgmt, EmployeePanel, OrderQueue};
+  MarketView -> {PriceChart, CompetitorList, CustomerDemand};
+  FinanceView -> {IncomeStmt, ExpenseBreakdown, CashFlow};
+  TaxView -> {TaxCalculator, TaxCalendar};
+
+  // ============================================================================
+  // LAYER 4: FOCUS GUIDE COMPONENTS
+  // ============================================================================
+  subgraph cluster_focus_guide {
+    label = "Focus Guide (Daily Coach)";
+    style = filled;
+    fillcolor = "#f4ecf7";
+    color = "#2c3e50";
+    
+    DailyChecklist [label="Daily Checklist\n(3-5 Tasks)"];
+    WeeklyReview [label="Weekly Deep Dive\n(60-min Review)"];
+    MonthlyStrategy [label="Monthly Strategy\n(Planning)"];
+    HabitTracker [label="Habit Tracker\n(Streaks, Badges)"];
+    Nudges [label="Smart Nudges\n(Reminders)"];
+  }
+
+  FocusGuideCard -> {DailyChecklist, WeeklyReview, MonthlyStrategy, HabitTracker, Nudges};
+
+  // ============================================================================
+  // LAYER 5: PROFITABILITY GOALS & MILESTONES
+  // ============================================================================
+  subgraph cluster_goals {
+    label = "Goals & Milestones";
+    style = filled;
+    fillcolor = "#fdeef4";
+    color = "#2c3e50";
+    
+    GoalsList [label="Goals List\n(Revenue, Profit, etc)"];
+    MilestoneTracker [label="Milestone Timeline\n(M1→M3→M6→M12)"];
+    BenchmarkComparison [label="Benchmark Comparison\n(You vs Average)"];
+    ProgressDashboard [label="Progress Dashboard\n(Visual Indicators)"];
+  }
+
+  GoalsCard -> {GoalsList, MilestoneTracker, BenchmarkComparison, ProgressDashboard};
+
+  // ============================================================================
+  // LAYER 6: ANALYTICS/REPORTS
+  // ============================================================================
+  subgraph cluster_analytics {
+    label = "Analytics View";
+    style = filled;
+    fillcolor = "#e8f4f8";
+    color = "#2c3e50";
+    
+    PerfSummary [label="Performance Summary"];
+    TrendCharts [label="Trend Charts\n(6-month)"];
+    BusinessComparison [label="Business Comparison\n(Try different types)"];
+    LearningInsights [label="Learning Insights\n(What you learned)"];
+  }
+
+  Analytics -> {PerfSummary, TrendCharts, BusinessComparison, LearningInsights};
+
+  // ============================================================================
+  // LAYER 7: MODALS & DIALOGS
+  // ============================================================================
+  subgraph cluster_modals {
+    label = "Modals & Dialogs";
+    style = filled;
+    fillcolor = "#fff3cd";
+    color = "#2c3e50";
+    
+    BusinessSelect [label="Business Type\nSelector Modal"];
+    ScenarioBuilder [label="What-If Scenario\nBuilder"];
+    DecisionDialog [label="Decision Point\nDialog"];
+    HelpTooltips [label="Contextual Help\nTooltips"];
+  }
+
+  // ============================================================================
+  // LAYER 8: STATE MANAGEMENT (Client-side)
+  // ============================================================================
+  subgraph cluster_state {
+    label = "Client State (No Backend)";
+    style = filled;
+    fillcolor = "#e8f5e9";
+    color = "#2c3e50";
+    
+    AuthState [label="Auth State\n(User, Login Status)"];
+    BusinessState [label="Business State\n(Type, Capital, Location)"];
+    SimulationState [label="Simulation State\n(Inventory, Orders, Cash)"];
+    MarketState [label="Market State\n(Prices, Demand)"];
+    GameTime [label="Game Time\n(Day/Week/Month)"];
+    UIState [label="UI State\n(Modals, Tabs, Sidebar)"];
+  }
+
+  // ============================================================================
+  // LAYER 9: STORAGE
+  // ============================================================================
+  subgraph cluster_storage {
+    label = "Client Storage";
+    style = filled;
+    fillcolor = "#f3e5f5";
+    color = "#2c3e50";
+    
+    LocalStorage [label="LocalStorage\n(Auth, Preferences)"];
+    IndexedDB [label="IndexedDB\n(Large Datasets)"];
+  }
+
+  AuthState -> LocalStorage;
+  SimulationState -> IndexedDB;
+  MarketState -> IndexedDB;
+
+  // ============================================================================
+  // LAYER 10: UTILITIES
+  // ============================================================================
+  subgraph cluster_utils {
+    label = "Utility Modules";
+    style = filled;
+    fillcolor = "#f1f8e9";
+    color = "#2c3e50";
+    
+    TaxCalculator_Util [label="Tax Calculator\n(GST, Income Tax)"];
+    SimulationEngine [label="Simulation Engine\n(Business Logic)"];
+    DataViz [label="Data Visualization\n(Charts, Graphs)"];
+    Notifications [label="Notifications\n(Toast, Alerts)"];
+  }
+
+  // ============================================================================
+  // CONNECTIONS
+  // ============================================================================
+  {InventoryMgmt, OrderQueue, EmployeePanel} -> SimulationState;
+  {PriceChart, CompetitorList, CustomerDemand} -> MarketState;
+  {IncomeStmt, ExpenseBreakdown, CashFlow} -> SimulationState;
+  {TaxCalculator} -> TaxCalculator_Util;
+  SimHeader -> GameTime;
+  {OperationsView, MarketView, FinanceView} -> SimulationEngine;
+  {ForecastCard, TrendCharts} -> DataViz;
+  {AlertsPanel, Nudges} -> Notifications;
+
+  // ============================================================================
+  // STYLING
+  // ============================================================================
+  AppShell [fillcolor="#3498db"];
+  Router [fillcolor="#9b59b6"];
+  AuthGuard [fillcolor="#9b59b6"];
+  
+  Dashboard [fillcolor="#e74c3c"];
+  Simulation [fillcolor="#e74c3c"];
+  Analytics [fillcolor="#e74c3c"];
+  Profile [fillcolor="#e74c3c"];
+}
