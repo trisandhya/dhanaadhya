@@ -14,7 +14,7 @@ import './App.css'
  */
 function App() {
   return (
-    <BrowserRouter future={{ v7_startTransition: true }}>
+    <BrowserRouter basename="/dhanaadhya/" future={{ v7_startTransition: true }}>
       <div className="min-h-screen flex flex-col bg-gray-50">
         {/* Navigation */}
         <Navbar userName="Raj Patel" />
