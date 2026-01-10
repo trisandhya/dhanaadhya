@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { Mail, Lock, Eye, EyeOff } from 'lucide-react'
+import { Mail, Lock, Eye, EyeOff, Building2 } from 'lucide-react'
+import { MSME_CATEGORIES, BUSINESS_CATEGORIES_GROUPED } from '../constants/businessCategories'
 
 /**
  * Login Page
@@ -11,6 +12,7 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false)
   const [email, setEmail] = useState('raj@msme.com')
   const [password, setPassword] = useState('demo123')
+  const [businessType, setBusinessType] = useState('')
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
 
@@ -127,6 +129,27 @@ export default function LoginPage() {
                   {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                 </button>
               </div>
+            </div>
+
+            {/* Business Type (Optional) */}
+            <div>
+              <label className="block text-sm font-medium text-gray-900 mb-2">Business Type (Optional)</label>
+              <select
+                value={businessType}
+                onChange={(e) => setBusinessType(e.target.value)}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition appearance-none cursor-pointer bg-white"
+              >
+                <option value="">All business types...</option>
+                {Object.entries(BUSINESS_CATEGORIES_GROUPED).map(([category, businesses]) => (
+                  <optgroup key={category} label={category}>
+                    {businesses.map(business => (
+                      <option key={business.id} value={business.id}>
+                        {business.icon} {business.name}
+                      </option>
+                    ))}
+                  </optgroup>
+                ))}
+              </select>
             </div>
 
             {/* Remember Me & Forgot Password */}

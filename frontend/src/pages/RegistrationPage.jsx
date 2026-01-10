@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Mail, Lock, User, Building2, Eye, EyeOff, CheckCircle } from 'lucide-react'
+import { MSME_CATEGORIES, BUSINESS_CATEGORIES_GROUPED } from '../constants/businessCategories'
 
 /**
  * Registration Page
@@ -12,6 +13,7 @@ export default function RegistrationPage() {
   const [formData, setFormData] = useState({
     fullName: '',
     businessName: '',
+    businessType: '',
     email: '',
     password: '',
     confirmPassword: '',
@@ -33,7 +35,7 @@ export default function RegistrationPage() {
     setError('')
 
     // Validation
-    if (!formData.fullName || !formData.businessName || !formData.email || !formData.password) {
+    if (!formData.fullName || !formData.businessName || !formData.businessType || !formData.email || !formData.password) {
       setError('Please fill in all fields')
       return
     }
@@ -163,6 +165,28 @@ export default function RegistrationPage() {
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
                 />
               </div>
+            </div>
+
+            {/* Business Type */}
+            <div>
+              <label className="block text-sm font-medium text-gray-900 mb-2">Business Type</label>
+              <select
+                name="businessType"
+                value={formData.businessType}
+                onChange={handleChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition appearance-none cursor-pointer bg-white"
+              >
+                <option value="">Select your business type...</option>
+                {Object.entries(BUSINESS_CATEGORIES_GROUPED).map(([category, businesses]) => (
+                  <optgroup key={category} label={category}>
+                    {businesses.map(business => (
+                      <option key={business.id} value={business.id}>
+                        {business.icon} {business.name}
+                      </option>
+                    ))}
+                  </optgroup>
+                ))}
+              </select>
             </div>
 
             {/* Email */}

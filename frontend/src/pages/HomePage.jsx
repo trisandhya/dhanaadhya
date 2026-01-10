@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { TrendingUp, BarChart3, Zap, Users, ArrowRight, CheckCircle } from 'lucide-react'
+import { BUSINESS_CATEGORIES_GROUPED } from '../constants/businessCategories'
 
 /**
  * Dhanaadhya Home Page - Landing Page
@@ -125,6 +126,31 @@ export default function HomePage() {
                 <p className="text-gray-600">Deep insights into revenue, expenses, profitability, and growth trends with actionable recommendations.</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Built for All MSME Types */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-gray-900 text-center mb-16">Built for All MSME Types</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {Object.entries(BUSINESS_CATEGORIES_GROUPED).map(([category, businesses]) => (
+              <div key={category} className="p-6 bg-white border border-gray-200 rounded-lg hover:shadow-lg transition">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">{category}</h3>
+                <div className="space-y-2">
+                  {businesses.slice(0, 5).map(business => (
+                    <div key={business.id} className="flex items-center gap-2 text-gray-600">
+                      <span className="text-lg">{business.icon}</span>
+                      <span className="text-sm">{business.name}</span>
+                    </div>
+                  ))}
+                  {businesses.length > 5 && (
+                    <p className="text-sm text-blue-600 font-medium pt-2">+ {businesses.length - 5} more...</p>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
