@@ -1,0 +1,83 @@
+digraph DhanaadhyaGapDependencies {
+  rankdir=TB;
+  node [shape=box, style="rounded,filled", fontname=Arial, fontsize=9];
+  edge [fontname=Arial, fontsize=8];
+  
+  // MVP Foundation (Must-Have)
+  MVP [shape=ellipse, fillcolor=lightcoral, fontsize=12, fontweight=bold, label="MVP Core\nMust Complete"];
+  
+  // Priority 1: Critical Blockers
+  P1 [shape=box, style="filled", fillcolor=red, label="PRIORITY 1\nCRITICAL BLOCKERS"];
+  
+  Onboard [fillcolor=lightcoral, label="1. Onboarding\nTutorial\n(5-min)"];
+  FailureRec [fillcolor=lightcoral, label="2. Failure\nRecovery\nMechanics"];
+  RealWorld [fillcolor=lightcoral, label="3. Real-World\nPlaybook\n✓ Bridge"];
+  Support [fillcolor=lightcoral, label="4. Support\nSystem\n(ChatBot+FAQ)"];
+  
+  MVP -> P1;
+  P1 -> Onboard;
+  P1 -> FailureRec;
+  P1 -> RealWorld;
+  P1 -> Support;
+  
+  // Priority 2: Must-Have (Beta Phase)
+  P2 [shape=box, style="filled", fillcolor=orange, label="PRIORITY 2\nMUST-HAVE (Beta)"];
+  
+  Content [fillcolor=orange, label="5. Content\nRoadmap\n(50 pieces)"];
+  Premium [fillcolor=orange, label="6. Premium\nTier Definition\n(1-2 options)"];
+  B2B [fillcolor=orange, label="7. B2B\nPartners\n(5 targets)"];
+  Analytics [fillcolor=orange, label="8. Analytics\nDashboard\n(Tracking)"];
+  
+  MVP -> P2;
+  P2 -> Content;
+  P2 -> Premium;
+  P2 -> B2B;
+  P2 -> Analytics;
+  
+  // Priority 3: Should-Have (Post-Launch)
+  P3 [shape=box, style="filled", fillcolor=yellow, label="PRIORITY 3\nSHOULD-HAVE (Scale)"];
+  
+  Personalization [fillcolor=lightyellow, label="9. Personalization\nQuiz\n(Difficulty+Demo)"];
+  Regional [fillcolor=lightyellow, label="10. Regional\nVariation\n(3 metros)"];
+  Replayability [fillcolor=lightyellow, label="11. Replayability\n& Progression\n(New Game+)"];
+  Community [fillcolor=lightyellow, label="12. Community\nFeatures\n(Forums)"];
+  
+  MVP -> P3;
+  P3 -> Personalization;
+  P3 -> Regional;
+  P3 -> Replayability;
+  P3 -> Community;
+  
+  // Priority 4: Nice-to-Have (Future)
+  P4 [shape=box, style="filled", fillcolor=lightblue, label="PRIORITY 4\nNICE-TO-HAVE (Future)"];
+  
+  Privacy [fillcolor=lightcyan, label="13. Privacy &\nCompliance\n(Legal)"];
+  Localization [fillcolor=lightcyan, label="14. Localization\n(Hindi+2 langs)"];
+  WellnessGuide [fillcolor=lightcyan, label="15. Mental Health\nGuidance\n(Wellness)"];
+  
+  MVP -> P4;
+  P4 -> Privacy;
+  P4 -> Localization;
+  P4 -> WellnessGuide;
+  
+  // Dependencies between items (showing what must be done first)
+  Onboard -> FailureRec [label="enables"];
+  FailureRec -> Personalization [label="requires"];
+  Support -> Content [label="feeds"];
+  Content -> Replayability [label="enables"];
+  Analytics -> Premium [label="measures"];
+  Premium -> B2B [label="enables"];
+  B2B -> Localization [label="requires"];
+  Regional -> RealWorld [label="feeds"];
+  Community -> Onboard [label="depends on"];
+  
+  // Risk layers
+  RiskLayer [shape=ellipse, fillcolor=red, fontsize=11, fontweight=bold, label="RISKS TO LAUNCH"];
+  
+  RiskLayer -> Onboard [label="⚠️ 70% drop-off"];
+  RiskLayer -> FailureRec [label="⚠️ Users quit"];
+  RiskLayer -> RealWorld [label="⚠️ No impact"];
+  RiskLayer -> Support [label="⚠️ Churn"];
+  RiskLayer -> Analytics [label="⚠️ Blind"];
+  RiskLayer -> Privacy [label="⚠️ Regulatory"];
+}

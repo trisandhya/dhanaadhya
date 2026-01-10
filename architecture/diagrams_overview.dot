@@ -1,0 +1,43 @@
+digraph DhanaadhyaArchitectureOverview {
+  rankdir=LR;
+  node [shape=box, style="rounded,filled", fontname=Arial, fontsize=11, fontweight=bold];
+  edge [fontname=Arial, fontsize=10];
+  
+  Overview [shape=ellipse, fillcolor=lightblue, fontsize=14, label="DHANAADHYA\nARCHITECTURE\nDIAGRAMS", fontweight=bold];
+  
+  // All 7 diagrams
+  SystemFlow [fillcolor=lightgreen, label="1. System Flow\n& Modules\n\nWhat: Component\ninteractions\n\nWho: Engineers,\nProduct"];
+  
+  DataFlow [fillcolor=lightgreen, label="2. Data Flow\nPipeline\n\nWhat: Data\nprocessing\n\nWho: Data eng,\nBackend"];
+  
+  FeatureGaps [fillcolor=lightcoral, label="3. Feature Gaps\n& Coverage\n\nWhat: What's missing,\npriorities\n\nWho: Product,\nLeadership"];
+  
+  UserJourney [fillcolor=lightgreen, label="4. User Journey\n& Experience\n\nWhat: Full user path,\nengagement loops\n\nWho: UX/Design,\nProduct"];
+  
+  TechArch [fillcolor=lightgreen, label="5. Technical\nArchitecture\n\nWhat: Frontend, Backend,\nInfra, APIs\n\nWho: Devops,\nCTO"];
+  
+  GapDeps [fillcolor=lightcoral, label="6. Gap Dependencies\n& Priorities\n\nWhat: What to build first,\ndependencies\n\nWho: PM,\nEngineering"];
+  
+  BusinessModel [fillcolor=gold, label="7. Business Model\n& Financials\n\nWhat: Revenue, costs,\nprojections\n\nWho: Leadership,\nInvestors"];
+  
+  Overview -> SystemFlow;
+  Overview -> DataFlow;
+  Overview -> FeatureGaps;
+  Overview -> UserJourney;
+  Overview -> TechArch;
+  Overview -> GapDeps;
+  Overview -> BusinessModel;
+  
+  // Relationships
+  SystemFlow -> DataFlow [label="explains"];
+  DataFlow -> TechArch [label="implements"];
+  UserJourney -> FeatureGaps [label="uncovers"];
+  FeatureGaps -> GapDeps [label="prioritizes"];
+  GapDeps -> BusinessModel [label="funds"];
+  SystemFlow -> BusinessModel [label="delivers"];
+  
+  // Usage patterns
+  Usage [shape=box, style="filled", fillcolor=lightyellow, label="USAGE\n\nPitch: 7 + 1\nEngineering: 5 + 2\nProduct: 3 + 6\nDesign: 4 + 1"];
+  
+  Overview -> Usage;
+}

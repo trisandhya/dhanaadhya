@@ -1,0 +1,128 @@
+digraph DhanaadhyaTechArchitecture {
+  rankdir=TB;
+  node [shape=box, style="rounded,filled", fontname=Arial];
+  edge [fontname=Arial, fontsize=9];
+  
+  // Frontend Layer
+  FrontendLayer [shape=box, style=filled, fillcolor=lightblue, label="FRONTEND LAYER", fontweight=bold];
+  Web [fillcolor=lightyellow, label="Web App\n(React/Vue)\nDashboard\nFocus Guide\nReports"];
+  Mobile [fillcolor=lightyellow, label="Mobile App\n(React Native)\nSame features\nOptimized for\nsmall screens"];
+  PWA [fillcolor=lightyellow, label="Progressive\nWeb App\nOffline support\nSyncWhenOnline"];
+  
+  FrontendLayer -> Web;
+  FrontendLayer -> Mobile;
+  FrontendLayer -> PWA;
+  
+  // API Gateway
+  API [shape=ellipse, fillcolor=lightgreen, label="API Gateway\n(REST/GraphQL)\nAuthentication\nRate limiting\nCaching"];
+  
+  Web -> API;
+  Mobile -> API;
+  PWA -> API;
+  
+  // Backend Layer
+  BackendLayer [shape=box, style=filled, fillcolor=lightcyan, label="BACKEND LAYER", fontweight=bold];
+  
+  SimService [fillcolor=lightyellow, label="Simulation Engine\nService\n- Business logic\n- Daily cycles\n- Event processing"];
+  
+  TaxService [fillcolor=lightyellow, label="Tax Engine\nService\n- GST calculation\n- Compliance\n- Penalties"];
+  
+  ForecastService [fillcolor=lightyellow, label="Forecast &\nAnalytics Service\n- Predictions\n- Recommendations\n- Insights"];
+  
+  UserService [fillcolor=lightyellow, label="User Service\n- Auth\n- Profile\n- Progress\n- Achievements"];
+  
+  NotificationService [fillcolor=lightyellow, label="Notification\nService\n- Push alerts\n- Email\n- In-app nudges"];
+  
+  BackendLayer -> SimService;
+  BackendLayer -> TaxService;
+  BackendLayer -> ForecastService;
+  BackendLayer -> UserService;
+  BackendLayer -> NotificationService;
+  
+  API -> SimService;
+  API -> TaxService;
+  API -> ForecastService;
+  API -> UserService;
+  API -> NotificationService;
+  
+  // Data Layer
+  DataLayer [shape=box, style=filled, fillcolor=gold, label="DATA LAYER", fontweight=bold];
+  
+  PrimaryDB [fillcolor=lightyellow, label="Primary DB\n(PostgreSQL)\nBusiness state\nUser data\nTransactions"];
+  
+  Cache [fillcolor=lightyellow, label="Cache\n(Redis)\nSession data\nFrequent queries\nLeaderboards"];
+  
+  FileStorage [fillcolor=lightyellow, label="File Storage\n(S3)\nUser uploads\nReports\nExports"];
+  
+  DataLayer -> PrimaryDB;
+  DataLayer -> Cache;
+  DataLayer -> FileStorage;
+  
+  SimService -> PrimaryDB;
+  TaxService -> PrimaryDB;
+  ForecastService -> PrimaryDB;
+  UserService -> PrimaryDB;
+  
+  SimService -> Cache;
+  ForecastService -> Cache;
+  
+  // External Services
+  ExtLayer [shape=box, style=filled, fillcolor=pink, label="EXTERNAL SERVICES", fontweight=bold];
+  
+  GovData [fillcolor=lightcyan, label="Govt Data APIs\n- GST rates\n- Tax laws\n- License info"];
+  
+  MarketData [fillcolor=lightcyan, label="Market Data APIs\n- Commodity prices\n- Weather data\n- Economic indices"];
+  
+  Analytics [fillcolor=lightcyan, label="Analytics\n(Mixpanel/GA)\n- User behavior\n- Funnel tracking\n- Engagement"];
+  
+  Email [fillcolor=lightcyan, label="Email Service\n(SendGrid)\n- Newsletters\n- Alerts\n- Reports"];
+  
+  Push [fillcolor=lightcyan, label="Push Service\n(Firebase)\n- Mobile alerts\n- Reminders\n- Notifications"];
+  
+  ExtLayer -> GovData;
+  ExtLayer -> MarketData;
+  ExtLayer -> Analytics;
+  ExtLayer -> Email;
+  ExtLayer -> Push;
+  
+  TaxService -> GovData;
+  SimService -> MarketData;
+  NotificationService -> Email;
+  NotificationService -> Push;
+  Web -> Analytics;
+  Mobile -> Analytics;
+  
+  // Infrastructure
+  InfraLayer [shape=box, style=filled, fillcolor=orange, label="INFRASTRUCTURE", fontweight=bold];
+  
+  Containerization [fillcolor=lightyellow, label="Containers\n(Docker)\nService isolation\nScalability"];
+  
+  Orchestration [fillcolor=lightyellow, label="Orchestration\n(Kubernetes)\nAuto-scaling\nLoad balancing\nHealth checks"];
+  
+  CDN [fillcolor=lightyellow, label="CDN\n(Cloudflare)\nGlobal distribution\nDDoS protection\nCaching"];
+  
+  Monitoring [fillcolor=lightyellow, label="Monitoring\n(Datadog/New Relic)\nPerformance\nErrors\nUptime"];
+  
+  InfraLayer -> Containerization;
+  InfraLayer -> Orchestration;
+  InfraLayer -> CDN;
+  InfraLayer -> Monitoring;
+  
+  // Regional/Local Considerations
+  RegionLayer [shape=box, style=filled, fillcolor=lightgreen, label="REGIONAL CONFIGURATION", fontweight=bold];
+  
+  StateConfig [fillcolor=lightyellow, label="State Data\n- Tax rates\n- License costs\n- Wage rates"];
+  
+  LocalMarket [fillcolor=lightyellow, label="Local Market\n- Regional prices\n- Seasonal data\n- Competition"];
+  
+  Language [fillcolor=lightyellow, label="Localization\n- Hindi\n- Regional lang\n- RTL support"];
+  
+  RegionLayer -> StateConfig;
+  RegionLayer -> LocalMarket;
+  RegionLayer -> Language;
+  
+  SimService -> StateConfig;
+  SimService -> LocalMarket;
+  Web -> Language;
+  Mobile -> Language;
+}

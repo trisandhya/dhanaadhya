@@ -1,0 +1,96 @@
+digraph DhanaadhyaSystemFlow {
+  rankdir=LR;
+  node [shape=box, style="rounded,filled", fillcolor=lightblue, fontname=Arial];
+  edge [fontname=Arial, fontsize=10];
+
+  // User Entry Points
+  Landing [shape=ellipse, fillcolor=lightgreen, label="Landing Page\n60-sec Demo"];
+  Register [shape=ellipse, fillcolor=lightgreen, label="Registration &\nAuthentication"];
+  
+  // Onboarding
+  Onboarding [shape=box, fillcolor=lightyellow, label="Onboarding\nTutorial\n(5 min)"];
+  BizSelect [label="Select Business Type\n& Location"];
+  CapitalInput [label="Choose Starting\nCapital & Loan"];
+  
+  // Core Simulation Engine
+  SimEngine [shape=box, style="rounded,filled", fillcolor=lightcyan, label="Simulation Engine\n(365 days)", fontsize=12, fontweight=bold];
+  
+  // Daily Operations
+  DailyOps [label="Daily Operations\n- Track transactions\n- Update inventory\n- Handle customer credit"];
+  
+  // Decision Making
+  Decisions [label="Decision Points\n- Pricing\n- Inventory\n- Marketing\n- Cost control"];
+  
+  // Market Simulation
+  MarketSim [label="Market Simulator\n- Customer demand\n- Competitor activity\n- Supply shocks\n- Seasonality"];
+  
+  // Data Processors
+  FinCalc [label="Financial Calculator\n- Revenue/COGS\n- Margins\n- Cash flow"];
+  
+  TaxEngine [label="Tax Engine\n- GST calculation\n- Income tax\n- Compliance calendar"];
+  
+  GoalTracker [label="Goal Tracker\n- Revenue targets\n- Profit targets\n- KPI tracking"];
+  
+  // Output Modules
+  Dashboard [shape=box, fillcolor=lightpink, label="Dashboard\n- Health score\n- Key metrics\n- Alerts\n- Forecasts"];
+  
+  FocusGuide [shape=box, fillcolor=lightpink, label="Focus Guide\n- Daily checklist\n- Weekly review\n- Monthly strategy\n- Smart nudges"];
+  
+  DecisionSupport [shape=box, fillcolor=lightpink, label="Decision Support\n- What-if analysis\n- Benchmarking\n- Recommendations"];
+  
+  Goals [shape=box, fillcolor=lightpink, label="Goals Dashboard\n- Milestone progress\n- Target tracking\n- Adaptive goals"];
+  
+  // Analytics & Feedback
+  Analytics [label="Analytics Engine\n- User behavior\n- Engagement metrics\n- Learning outcomes"];
+  
+  // End States
+  Graduation [shape=ellipse, fillcolor=lightgreen, label="Graduation\n✓ Certificate\n✓ Playbook"];
+  
+  Restart [shape=ellipse, fillcolor=lightyellow, label="Restart/\nRedo"];
+  
+  NewBiz [shape=ellipse, fillcolor=lightyellow, label="Try New\nBusiness Type"];
+  
+  Premium [shape=box, fillcolor=gold, label="Premium Features\n- Expert consultation\n- Advanced analytics\n- Real-world tools"];
+
+  // Connections
+  Landing -> Register;
+  Register -> Onboarding;
+  Onboarding -> BizSelect;
+  BizSelect -> CapitalInput;
+  CapitalInput -> SimEngine;
+  
+  SimEngine -> DailyOps;
+  SimEngine -> Decisions;
+  SimEngine -> MarketSim;
+  
+  DailyOps -> FinCalc;
+  Decisions -> FinCalc;
+  MarketSim -> DailyOps;
+  
+  FinCalc -> Dashboard;
+  FinCalc -> Goals;
+  TaxEngine -> Dashboard;
+  TaxEngine -> FocusGuide;
+  
+  Dashboard -> DecisionSupport;
+  Goals -> FocusGuide;
+  
+  FocusGuide -> Decisions;
+  DecisionSupport -> Decisions;
+  
+  Dashboard -> Analytics;
+  Goals -> Analytics;
+  
+  SimEngine -> Graduation [label="Day 365\nor\nGoals Met"];
+  
+  Graduation -> Restart [label="Try Again"];
+  Graduation -> NewBiz [label="New Business"];
+  Graduation -> Premium [label="Get Help"];
+  
+  Restart -> BizSelect;
+  NewBiz -> BizSelect;
+  
+  // Feedback loop
+  Analytics -> Dashboard [label="Insights"];
+  Analytics -> FocusGuide [label="Personalization"];
+}

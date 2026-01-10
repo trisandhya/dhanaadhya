@@ -1,0 +1,69 @@
+digraph DhanaadhyaDataFlow {
+  rankdir=TB;
+  node [shape=box, style="rounded,filled", fontname=Arial];
+  edge [fontname=Arial, fontsize=9];
+
+  // Input Data Sources
+  UserData [fillcolor=lightgreen, label="User Input\n- Business type\n- Location\n- Capital\n- Decisions"];
+  
+  RealData [fillcolor=lightblue, label="Real Data Sources\n- GST rates (gov.in)\n- Market prices (APIs)\n- Tax rates (IT dept)\n- License costs"];
+  
+  SimData [fillcolor=lightcyan, label="Simulation Data\n- Customer behavior\n- Demand curves\n- Competitor moves"];
+  
+  HistoricalData [fillcolor=lightyellow, label="Historical Data\n- MSME benchmarks\n- Seasonal patterns\n- Cost structures"];
+  
+  // Processing Layer
+  TransactionProcessor [shape=ellipse, fillcolor=lightpink, label="Transaction\nProcessor"];
+  
+  TaxCalculator [shape=ellipse, fillcolor=lightpink, label="Tax\nCalculator"];
+  
+  GoalCalculator [shape=ellipse, fillcolor=lightpink, label="Goal\nCalculator"];
+  
+  ForecastEngine [shape=ellipse, fillcolor=lightpink, label="Forecast\nEngine"];
+  
+  RecommendationEngine [shape=ellipse, fillcolor=lightpink, label="Recommendation\nEngine"];
+  
+  // Data Storage
+  BusinessState [shape=cylinder, fillcolor=gold, label="Business State DB\n- Daily metrics\n- Inventory levels\n- Customer list\n- Transactions"];
+  
+  UserProgress [shape=cylinder, fillcolor=gold, label="User Progress DB\n- Goals\n- Achievements\n- Focus status\n- Analytics"];
+  
+  // Output Data
+  DashboardData [shape=box3d, fillcolor=lightcyan, label="Dashboard Data\n- KPIs\n- Health score\n- Alerts\n- Forecasts"];
+  
+  FocusData [shape=box3d, fillcolor=lightcyan, label="Focus Data\n- Daily priorities\n- Weekly review\n- Nudges"];
+  
+  ReportData [shape=box3d, fillcolor=lightcyan, label="Report Data\n- Goals progress\n- Achievements\n- Recommendations"];
+  
+  AnalyticsData [shape=box3d, fillcolor=lightcyan, label="Analytics Data\n- User behavior\n- Engagement\n- Learning impact"];
+
+  // Connections
+  UserData -> TransactionProcessor;
+  RealData -> TaxCalculator;
+  RealData -> ForecastEngine;
+  SimData -> TransactionProcessor;
+  HistoricalData -> GoalCalculator;
+  HistoricalData -> RecommendationEngine;
+  
+  TransactionProcessor -> BusinessState;
+  TaxCalculator -> BusinessState;
+  GoalCalculator -> UserProgress;
+  
+  BusinessState -> DashboardData;
+  BusinessState -> FocusData;
+  BusinessState -> ReportData;
+  
+  UserProgress -> ReportData;
+  UserProgress -> FocusData;
+  
+  ForecastEngine -> DashboardData;
+  RecommendationEngine -> ReportData;
+  
+  BusinessState -> AnalyticsData;
+  UserProgress -> AnalyticsData;
+  DashboardData -> AnalyticsData;
+  
+  // Feedback
+  AnalyticsData -> RecommendationEngine [label="Personalization"];
+  AnalyticsData -> ForecastEngine [label="Model Refinement"];
+}

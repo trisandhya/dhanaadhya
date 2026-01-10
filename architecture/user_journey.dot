@@ -1,0 +1,101 @@
+digraph DhanaadhyaUserJourney {
+  rankdir=LR;
+  node [shape=box, style="rounded,filled", fontname=Arial, fontsize=10];
+  edge [fontname=Arial, fontsize=9];
+  
+  // Stage 1: Awareness
+  Stage1 [shape=ellipse, fillcolor=lightblue, label="STAGE 1\nAwareness", fontweight=bold];
+  Unaware [label="Unaware of\nBusiness Risks"];
+  Demo [label="Watch 60-sec\nDemo"];
+  Interested [label="Interested in\nLearning"];
+  
+  Stage1 -> Unaware;
+  Unaware -> Demo;
+  Demo -> Interested;
+  
+  // Stage 2: Onboarding
+  Stage2 [shape=ellipse, fillcolor=lightgreen, label="STAGE 2\nOnboarding", fontweight=bold];
+  Register [label="Create Account"];
+  Tutorial [label="5-min Interactive\nTutorial"];
+  BizSelect [label="Select Business\n& Location"];
+  Setup [label="Choose Capital &\nStarting Position"];
+  
+  Interested -> Stage2;
+  Stage2 -> Register;
+  Register -> Tutorial;
+  Tutorial -> BizSelect;
+  BizSelect -> Setup;
+  
+  // Stage 3: Learning & Growth
+  Stage3 [shape=ellipse, fillcolor=lightyellow, label="STAGE 3\nSimulation (365 days)", fontweight=bold];
+  Launch [label="Phase 1: Launch\n(Days 1-30)\n❌ Negative profit\nOK at start"];
+  Growth [label="Phase 2: Growth\n(Days 31-120)\n✓ Hit profitability"];
+  Optimize [label="Phase 3: Optimize\n(Days 121-250)\n✓ Maximize margins"];
+  Scale [label="Phase 4: Scale\n(Days 251-365)\n✓ Ready to launch"];
+  
+  Setup -> Stage3;
+  Stage3 -> Launch;
+  Launch -> Growth;
+  Growth -> Optimize;
+  Optimize -> Scale;
+  
+  // Engagement During Simulation
+  DailyLoop [label="Daily Loop\n• Check dashboard\n• Make decisions\n• Face consequences"];
+  WeeklyLoop [label="Weekly Loop\n• Deep analysis\n• Review metrics\n• Plan ahead"];
+  MonthlyLoop [label="Monthly Loop\n• Strategy review\n• Goal adjustment\n• Scenario planning"];
+  
+  Launch -> DailyLoop;
+  DailyLoop -> WeeklyLoop;
+  WeeklyLoop -> MonthlyLoop;
+  MonthlyLoop -> DailyLoop [label="Repeat"];
+  
+  // Stage 4: Graduation
+  Stage4 [shape=ellipse, fillcolor=lightgreen, label="STAGE 4\nGraduation", fontweight=bold];
+  Complete [label="Complete\n365 days or\nAchieve Goals"];
+  Celebrate [label="🎓 Certificate\n✓ Badges\n✓ Achievements"];
+  
+  Scale -> Stage4;
+  Stage4 -> Complete;
+  Complete -> Celebrate;
+  
+  // Stage 5: Post-Graduation Paths
+  Stage5 [shape=ellipse, fillcolor=lightcyan, label="STAGE 5\nPost-Graduation", fontweight=bold];
+  RealWorld [label="Real-World\nPlaybook\n✓ Registration\n✓ GST Setup\n✓ Tools"];
+  StartBiz [label="Start Real\nBusiness"];
+  Explore [label="Explore New\nBusiness Type"];
+  Premium [label="Upgrade to\nPremium"];
+  
+  Celebrate -> Stage5;
+  Stage5 -> RealWorld;
+  Stage5 -> Explore;
+  Stage5 -> Premium;
+  
+  RealWorld -> StartBiz [label="Apply Learnings"];
+  Explore -> BizSelect [label="New Simulation"];
+  
+  // Dropout/Failure Paths (Dashed)
+  Dropout [shape=box, fillcolor=lightcoral, label="Dropout Point"];
+  Confused [label="Confused about\nnext steps"];
+  Stuck [label="Stuck in\nsimulation"];
+  Quit [label="Quit without\ncompleting"];
+  
+  Tutorial -> Confused [style=dashed, label="Poor UX"];
+  Confused -> Dropout [style=dashed];
+  Dropout -> Quit [style=dashed];
+  
+  Launch -> Stuck [style=dashed, label="Business fails"];
+  Stuck -> Quit [style=dashed];
+  
+  // Recovery Path (Dotted)
+  Recovery [label="Recovery\n• Analyze failure\n• Restart\n• New strategy"];
+  Stuck -> Recovery [style=dotted, label="Second chance"];
+  Recovery -> Launch [style=dotted];
+  
+  // Engagement Throughout
+  Engage [shape=box, fillcolor=gold, label="Engagement Drivers\n• Daily/weekly goals\n• Badges & streaks\n• Leaderboards\n• Nudges & hints"];
+  
+  Launch -> Engage;
+  Growth -> Engage;
+  Optimize -> Engage;
+  Scale -> Engage;
+}

@@ -1,0 +1,54 @@
+digraph DhanaadhyaGaps {
+  rankdir=TB;
+  node [shape=box, style="rounded,filled", fontname=Arial];
+  edge [fontname=Arial, fontsize=9];
+  
+  // Root: Product Vision
+  Vision [shape=ellipse, fillcolor=lightgreen, fontsize=14, fontweight=bold, label="Dhanaadhya\nComplete Vision"];
+  
+  // Major Categories
+  Core [fillcolor=lightgreen, label="✓ CORE FEATURES\n(85% Complete)\n\n- Dashboard\n- Focus Guide\n- Tax Engine\n- Market Sim\n- Goals System"];
+  
+  UX [fillcolor=lightcoral, label="✗ USER EXPERIENCE\n(10% Complete)\n\n- Onboarding Tutorial\n- Failure Recovery\n- Real-world Bridge\n- Personalization\n- Accessibility"];
+  
+  Content [fillcolor=orange, label="⚠ CONTENT STRATEGY\n(20% Complete)\n\n- Educational Content\n- Expert Tips\n- Help Resources\n- Video Library\n- Maintenance Plan"];
+  
+  Business [fillcolor=lightcoral, label="✗ BUSINESS MODEL\n(15% Complete)\n\n- Premium Tiers\n- B2B Partnerships\n- Distribution\n- Pricing Strategy"];
+  
+  Community [fillcolor=orange, label="⚠ COMMUNITY\n(20% Complete)\n\n- Support System\n- User Forums\n- Feedback Loop\n- Leaderboards"];
+  
+  Legal [fillcolor=lightcoral, label="✗ LEGAL & COMPLIANCE\n(5% Complete)\n\n- Privacy Policy\n- Data Security\n- Regional Laws\n- Tax Compliance"];
+  
+  Analytics [fillcolor=orange, label="⚠ ANALYTICS\n(10% Complete)\n\n- Engagement Tracking\n- Learning Outcomes\n- Success Metrics\n- A/B Testing"];
+  
+  // Connections
+  Vision -> Core;
+  Vision -> UX;
+  Vision -> Content;
+  Vision -> Business;
+  Vision -> Community;
+  Vision -> Legal;
+  Vision -> Analytics;
+  
+  // Sub-components with priorities
+  Core -> CoreSub [label="Solid Foundation"];
+  CoreSub [shape=ellipse, label="✓✓✓ Ready"];
+  
+  UX -> UXCritical [label="MUST-HAVE for MVP"];
+  UXCritical [shape=ellipse, fillcolor=red, label="CRITICAL\nBlocks Launch"];
+  
+  Content -> ContentMust [label="MUST-HAVE for Launch"];
+  ContentMust [shape=ellipse, fillcolor=orange, label="HIGH\nEducation Value"];
+  
+  Business -> BizMust [label="MUST-HAVE for Scale"];
+  BizMust [shape=ellipse, fillcolor=orange, label="HIGH\nRevenue Driver"];
+  
+  Community -> CommMust [label="SHOULD-HAVE for Beta"];
+  CommMust [shape=ellipse, fillcolor=yellow, label="MEDIUM\nUser Retention"];
+  
+  Legal -> LegalCrit [label="CRITICAL RISK"];
+  LegalCrit [shape=ellipse, fillcolor=red, label="CRITICAL\nCompliance Risk"];
+  
+  Analytics -> AnalMust [label="MUST-HAVE for Iteration"];
+  AnalMust [shape=ellipse, fillcolor=orange, label="HIGH\nData-Driven Decisions"];
+}

@@ -1,0 +1,88 @@
+digraph DhanaadhyaBusinessModel {
+  rankdir=TB;
+  node [shape=box, style="rounded,filled", fontname=Arial, fontsize=10];
+  edge [fontname=Arial, fontsize=9];
+  
+  // Revenue Streams
+  Revenue [shape=ellipse, fillcolor=lightgreen, fontsize=12, fontweight=bold, label="Revenue Streams"];
+  
+  FreeUser [fillcolor=lightyellow, label="Free Tier\n• Simulation only\n• Basic dashboard\n• Limited features\n• Conversion target: 5%"];
+  
+  Premium [fillcolor=gold, label="Premium Tier\n• ₹99/month\n• Expert tips\n• Advanced analytics\n• Email support\n• Est: 100K-150K users/year"];
+  
+  Enterprise [fillcolor=orange, label="Enterprise/B2B\n• ₹5000+/month\n• Org dashboard\n• Custom content\n• White-label\n• Est: 500+ orgs"];
+  
+  Revenue -> FreeUser;
+  Revenue -> Premium;
+  Revenue -> Enterprise;
+  
+  // Customer Segments
+  Segments [shape=ellipse, fillcolor=lightblue, fontsize=12, fontweight=bold, label="Customer Segments"];
+  
+  Newbies [fillcolor=lightyellow, label="Newbie Entrepreneurs\n(18-35 years)\nPre-launch planning\n60% of users"];
+  
+  Students [fillcolor=lightyellow, label="Students\n(18-25 years)\nEntrepreneurship courses\n20% of users"];
+  
+  NGOs [fillcolor=lightyellow, label="NGOs & Training\nPrograms\nWomen entrepreneurs\n15% of users"];
+  
+  Govt [fillcolor=lightyellow, label="Government Programs\nNITI Aayog, NASSCOM\nBulk licensing\n5% of users"];
+  
+  Segments -> Newbies;
+  Segments -> Students;
+  Segments -> NGOs;
+  Segments -> Govt;
+  
+  // Acquisition Channels
+  Acquisition [shape=ellipse, fillcolor=lightcyan, fontsize=12, fontweight=bold, label="Acquisition Channels"];
+  
+  Organic [fillcolor=lightyellow, label="Organic\n• Word-of-mouth\n• Media coverage\n• SEO\nCost: Low\nSpeed: Slow"];
+  
+  SocialMedia [fillcolor=lightyellow, label="Social Media\n• YouTube channel\n• Instagram\n• LinkedIn\nCost: Medium\nSpeed: Medium"];
+  
+  Partnerships [fillcolor=lightyellow, label="Partnerships\n• B2B deals\n• Referral programs\n• Affiliate\nCost: Medium\nSpeed: Fast"];
+  
+  Paid [fillcolor=lightyellow, label="Paid Ads\n• Google Ads\n• Facebook\n• YouTube Pre-roll\nCost: High\nSpeed: Fast"];
+  
+  Acquisition -> Organic;
+  Acquisition -> SocialMedia;
+  Acquisition -> Partnerships;
+  Acquisition -> Paid;
+  
+  // Customer Costs
+  CostStructure [shape=ellipse, fillcolor=lightcoral, fontsize=12, fontweight=bold, label="Cost Structure"];
+  
+  Infrastructure [fillcolor=lightyellow, label="Infrastructure\n• Servers\n• Database\n• CDN\nMonthly: ₹50K-100K"];
+  
+  ContentCreation [fillcolor=lightyellow, label="Content\n• Video production\n• Article writing\n• Design\nMonthly: ₹100K-150K"];
+  
+  DataAPIs [fillcolor=lightyellow, label="Data & APIs\n• Market data\n• Gov APIs\n• Payment processing\nMonthly: ₹20K-40K"];
+  
+  Team [fillcolor=lightyellow, label="Team\n• Eng (2-3)\n• Product\n• Support\n• Marketing\nMonthly: ₹300K-400K"];
+  
+  CostStructure -> Infrastructure;
+  CostStructure -> ContentCreation;
+  CostStructure -> DataAPIs;
+  CostStructure -> Team;
+  
+  // Financial Projections
+  Financials [shape=box, style="filled", fillcolor=gold];
+  Financials [label="FINANCIAL PROJECTIONS\n\nYear 1: -₹20L (investment phase)\nYear 2: -₹5L (pre-profitability)\nYear 3: +₹10L (break-even)\nYear 4: +₹30L (profitable)\n\nMARKET SIZE: ₹100-200 Cr potential"];
+  
+  Premium -> Financials [label="Revenue"];
+  Enterprise -> Financials [label="Revenue"];
+  CostStructure -> Financials [label="Costs"];
+  
+  // Unit Economics (Free Tier)
+  UnitEcon [shape=box, style="filled", fillcolor=lightgreen];
+  UnitEcon [label="UNIT ECONOMICS\n(Free to Premium)\n\nCAC: ₹500 (avg acquisition)\nLTV: ₹18,000 (₹99×18 months)\nLTV/CAC Ratio: 36x (excellent)\nPayback period: 5 months\nCLV > 3x CAC ✓"];
+  
+  FreeUser -> UnitEcon [label="funnel"];
+  Premium -> UnitEcon [label="LTV"];
+  
+  // Growth Metrics
+  Metrics [shape=box, style="filled", fillcolor=lightblue];
+  Metrics [label="TARGET METRICS\n\nYear 1:\n• 10K users (free)\n• 500 premium\n• 50 B2B orgs\n\nYear 3:\n• 100K users (free)\n• 10K premium\n• 500 B2B orgs\n\nYear 5:\n• 500K users (free)\n• 50K premium\n• 2000 B2B orgs"];
+  
+  Newbies -> Metrics [label="targets"];
+  Acquisition -> Metrics [label="channels"];
+}
