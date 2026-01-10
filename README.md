@@ -37,7 +37,68 @@
 
 ---
 
-## Problem We're Solving
+## 🎮 Freemium Model
+
+### **Free Version** (Game/Simulation)
+- Static mock data retrieved from industry sources
+- Educational/learning environment
+- Sandbox to explore and understand business concepts
+- No real business data connection
+- Perfect for onboarding and business fundamentals
+
+### **Paid Version** (Live Intelligence)
+- Live data feeds from business systems
+- Real business metrics and performance data
+- Actual financial insights and forecasts
+- Real-time alerts and recommendations
+- Integration with accounting/POS systems
+- Advanced analytics and benchmarking
+
+---
+
+## 🏗️ Architecture: Client-Side Live Data Integration
+
+**Strategic Design for Cost Efficiency & Scalability**
+
+Rather than centralizing all live data feeds in backend servers (expensive at scale), Dhanaadhya uses a **distributed client-side data aggregation model**:
+
+### **Key Principles:**
+1. **User-Owned Connections** - Users connect their own financial accounts directly from the client
+2. **Decentralized Data Processing** - Dashboard computations happen on user's device
+3. **Reduced Server Cost** - Backend only orchestrates, doesn't store/process live data
+4. **Better Privacy** - User financial data never stored on centralized servers
+5. **Infinite Scalability** - Cost doesn't increase with user count
+
+### **Data Sources (Paid Version):**
+- 🏦 **Banking APIs** - Direct account feed (UPI, bank statements, transaction history)
+- 💰 **GST/Accounting Software** - Tally, Zoho Books, QuickBooks integration
+- 🛒 **E-commerce Platforms** - Shopify, WooCommerce, Amazon Seller Central
+- 📊 **POS Systems** - Billing software, cash registers
+- 📱 **Payment Gateways** - Razorpay, PayU, PhonePe for merchant data
+
+### **Client-Side Flow:**
+```
+User Browser (Dashboard)
+    ↓
+OAuth/API Connections (User's credentials stored locally)
+    ↓
+Direct API calls to user's accounts (Bank, GST, POS, etc.)
+    ↓
+Data aggregation & processing on client
+    ↓
+Visualizations rendered locally
+    ↓
+(Optional) Sync key insights back to backend for ML/recommendations
+```
+
+### **Benefits for MSMEs:**
+- ✅ No monthly server/database costs passed to users
+- ✅ Real-time data (not sync delays)
+- ✅ Complete data ownership and control
+- ✅ Compliance-friendly (data doesn't leave user's ecosystem)
+- ✅ Works offline (cached data, local processing)
+
+---
 
 **60% of new MSMEs fail in their first 3 years** - not because of bad ideas, but because:
 1. **Founders don't know what to focus on daily/weekly/monthly** - leading to neglect of critical areas
