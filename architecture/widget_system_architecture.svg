@@ -44,9 +44,9 @@
 <!-- WidgetBase -->
 <g id="node2" class="node">
 <title>WidgetBase</title>
-<path fill="#2c3e50" stroke="#2c3e50" d="M1041.88,-128.5C1041.88,-128.5 962.12,-128.5 962.12,-128.5 956.12,-128.5 950.12,-122.5 950.12,-116.5 950.12,-116.5 950.12,-104.5 950.12,-104.5 950.12,-98.5 956.12,-92.5 962.12,-92.5 962.12,-92.5 1041.88,-92.5 1041.88,-92.5 1047.88,-92.5 1053.88,-98.5 1053.88,-104.5 1053.88,-104.5 1053.88,-116.5 1053.88,-116.5 1053.88,-122.5 1047.88,-128.5 1041.88,-128.5"/>
-<text xml:space="preserve" text-anchor="middle" x="1002" y="-112.45" font-family="Arial" font-size="9.00">Widget Base</text>
-<text xml:space="preserve" text-anchor="middle" x="1002" y="-101.95" font-family="Arial" font-size="9.00">(Props, State, Layout)</text>
+<path fill="#ffffff" stroke="#2c3e50" d="M1041.88,-128.5C1041.88,-128.5 962.12,-128.5 962.12,-128.5 956.12,-128.5 950.12,-122.5 950.12,-116.5 950.12,-116.5 950.12,-104.5 950.12,-104.5 950.12,-98.5 956.12,-92.5 962.12,-92.5 962.12,-92.5 1041.88,-92.5 1041.88,-92.5 1047.88,-92.5 1053.88,-98.5 1053.88,-104.5 1053.88,-104.5 1053.88,-116.5 1053.88,-116.5 1053.88,-122.5 1047.88,-128.5 1041.88,-128.5"/>
+<text xml:space="preserve" text-anchor="middle" x="1002" y="-112.45" font-family="Arial" font-size="9.00" fill="#1a1a1a">Widget Base</text>
+<text xml:space="preserve" text-anchor="middle" x="1002" y="-101.95" font-family="Arial" font-size="9.00" fill="#1a1a1a">(Props, State, Layout)</text>
 </g>
 <!-- WidgetSystem&#45;&gt;WidgetBase -->
 <g id="edge1" class="edge">
@@ -57,9 +57,9 @@
 <!-- WidgetRegistry -->
 <g id="node3" class="node">
 <title>WidgetRegistry</title>
-<path fill="#2c3e50" stroke="#2c3e50" d="M1188.25,-128.5C1188.25,-128.5 1083.75,-128.5 1083.75,-128.5 1077.75,-128.5 1071.75,-122.5 1071.75,-116.5 1071.75,-116.5 1071.75,-104.5 1071.75,-104.5 1071.75,-98.5 1077.75,-92.5 1083.75,-92.5 1083.75,-92.5 1188.25,-92.5 1188.25,-92.5 1194.25,-92.5 1200.25,-98.5 1200.25,-104.5 1200.25,-104.5 1200.25,-116.5 1200.25,-116.5 1200.25,-122.5 1194.25,-128.5 1188.25,-128.5"/>
-<text xml:space="preserve" text-anchor="middle" x="1136" y="-112.45" font-family="Arial" font-size="9.00">Widget Registry</text>
-<text xml:space="preserve" text-anchor="middle" x="1136" y="-101.95" font-family="Arial" font-size="9.00">(Discovery &amp; Configuration)</text>
+<path fill="#ffffff" stroke="#2c3e50" d="M1188.25,-128.5C1188.25,-128.5 1083.75,-128.5 1083.75,-128.5 1077.75,-128.5 1071.75,-122.5 1071.75,-116.5 1071.75,-116.5 1071.75,-104.5 1071.75,-104.5 1071.75,-98.5 1077.75,-92.5 1083.75,-92.5 1083.75,-92.5 1188.25,-92.5 1188.25,-92.5 1194.25,-92.5 1200.25,-98.5 1200.25,-104.5 1200.25,-104.5 1200.25,-116.5 1200.25,-116.5 1200.25,-122.5 1194.25,-128.5 1188.25,-128.5"/>
+<text xml:space="preserve" text-anchor="middle" x="1136" y="-112.45" font-family="Arial" font-size="9.00" fill="#1a1a1a">Widget Registry</text>
+<text xml:space="preserve" text-anchor="middle" x="1136" y="-101.95" font-family="Arial" font-size="9.00" fill="#1a1a1a">(Discovery &amp; Configuration)</text>
 </g>
 <!-- WidgetSystem&#45;&gt;WidgetRegistry -->
 <g id="edge2" class="edge">
@@ -70,9 +70,9 @@
 <!-- DragDrop -->
 <g id="node4" class="node">
 <title>DragDrop</title>
-<path fill="#2c3e50" stroke="#2c3e50" d="M1323.62,-128.5C1323.62,-128.5 1230.38,-128.5 1230.38,-128.5 1224.38,-128.5 1218.38,-122.5 1218.38,-116.5 1218.38,-116.5 1218.38,-104.5 1218.38,-104.5 1218.38,-98.5 1224.38,-92.5 1230.38,-92.5 1230.38,-92.5 1323.62,-92.5 1323.62,-92.5 1329.62,-92.5 1335.62,-98.5 1335.62,-104.5 1335.62,-104.5 1335.62,-116.5 1335.62,-116.5 1335.62,-122.5 1329.62,-128.5 1323.62,-128.5"/>
-<text xml:space="preserve" text-anchor="middle" x="1277" y="-112.45" font-family="Arial" font-size="9.00">Drag &amp; Drop</text>
-<text xml:space="preserve" text-anchor="middle" x="1277" y="-101.95" font-family="Arial" font-size="9.00">(Widget Rearrangement)</text>
+<path fill="#ffffff" stroke="#2c3e50" d="M1323.62,-128.5C1323.62,-128.5 1230.38,-128.5 1230.38,-128.5 1224.38,-128.5 1218.38,-122.5 1218.38,-116.5 1218.38,-116.5 1218.38,-104.5 1218.38,-104.5 1218.38,-98.5 1224.38,-92.5 1230.38,-92.5 1230.38,-92.5 1323.62,-92.5 1323.62,-92.5 1329.62,-92.5 1335.62,-98.5 1335.62,-104.5 1335.62,-104.5 1335.62,-116.5 1335.62,-116.5 1335.62,-122.5 1329.62,-128.5 1323.62,-128.5"/>
+<text xml:space="preserve" text-anchor="middle" x="1277" y="-112.45" font-family="Arial" font-size="9.00" fill="#1a1a1a">Drag &amp; Drop</text>
+<text xml:space="preserve" text-anchor="middle" x="1277" y="-101.95" font-family="Arial" font-size="9.00" fill="#1a1a1a">(Widget Rearrangement)</text>
 </g>
 <!-- WidgetSystem&#45;&gt;DragDrop -->
 <g id="edge3" class="edge">
@@ -83,9 +83,9 @@
 <!-- Responsive -->
 <g id="node5" class="node">
 <title>Responsive</title>
-<path fill="#2c3e50" stroke="#2c3e50" d="M1434.25,-128.5C1434.25,-128.5 1365.75,-128.5 1365.75,-128.5 1359.75,-128.5 1353.75,-122.5 1353.75,-116.5 1353.75,-116.5 1353.75,-104.5 1353.75,-104.5 1353.75,-98.5 1359.75,-92.5 1365.75,-92.5 1365.75,-92.5 1434.25,-92.5 1434.25,-92.5 1440.25,-92.5 1446.25,-98.5 1446.25,-104.5 1446.25,-104.5 1446.25,-116.5 1446.25,-116.5 1446.25,-122.5 1440.25,-128.5 1434.25,-128.5"/>
-<text xml:space="preserve" text-anchor="middle" x="1400" y="-112.45" font-family="Arial" font-size="9.00">Responsive Grid</text>
-<text xml:space="preserve" text-anchor="middle" x="1400" y="-101.95" font-family="Arial" font-size="9.00">(12&#45;column layout)</text>
+<path fill="#ffffff" stroke="#2c3e50" d="M1434.25,-128.5C1434.25,-128.5 1365.75,-128.5 1365.75,-128.5 1359.75,-128.5 1353.75,-122.5 1353.75,-116.5 1353.75,-116.5 1353.75,-104.5 1353.75,-104.5 1353.75,-98.5 1359.75,-92.5 1365.75,-92.5 1365.75,-92.5 1434.25,-92.5 1434.25,-92.5 1440.25,-92.5 1446.25,-98.5 1446.25,-104.5 1446.25,-104.5 1446.25,-116.5 1446.25,-116.5 1446.25,-122.5 1440.25,-128.5 1434.25,-128.5"/>
+<text xml:space="preserve" text-anchor="middle" x="1400" y="-112.45" font-family="Arial" font-size="9.00" fill="#1a1a1a">Responsive Grid</text>
+<text xml:space="preserve" text-anchor="middle" x="1400" y="-101.95" font-family="Arial" font-size="9.00" fill="#1a1a1a">(12&#45;column layout)</text>
 </g>
 <!-- WidgetSystem&#45;&gt;Responsive -->
 <g id="edge4" class="edge">
@@ -96,9 +96,9 @@
 <!-- MetricCard -->
 <g id="node6" class="node">
 <title>MetricCard</title>
-<path fill="#2c3e50" stroke="#2c3e50" d="M95.88,-52C95.88,-52 28.12,-52 28.12,-52 22.12,-52 16.12,-46 16.12,-40 16.12,-40 16.12,-28 16.12,-28 16.12,-22 22.12,-16 28.12,-16 28.12,-16 95.88,-16 95.88,-16 101.88,-16 107.88,-22 107.88,-28 107.88,-28 107.88,-40 107.88,-40 107.88,-46 101.88,-52 95.88,-52"/>
-<text xml:space="preserve" text-anchor="middle" x="62" y="-35.95" font-family="Arial" font-size="9.00">MetricCard Widget</text>
-<text xml:space="preserve" text-anchor="middle" x="62" y="-25.45" font-family="Arial" font-size="9.00">(Value + Trend)</text>
+<path fill="#e8f8f5" stroke="#2c3e50" d="M95.88,-52C95.88,-52 28.12,-52 28.12,-52 22.12,-52 16.12,-46 16.12,-40 16.12,-40 16.12,-28 16.12,-28 16.12,-22 22.12,-16 28.12,-16 28.12,-16 95.88,-16 95.88,-16 101.88,-16 107.88,-22 107.88,-28 107.88,-28 107.88,-40 107.88,-40 107.88,-46 101.88,-52 95.88,-52"/>
+<text xml:space="preserve" text-anchor="middle" x="62" y="-35.95" font-family="Arial" font-size="9.00" fill="#1a1a1a">MetricCard Widget</text>
+<text xml:space="preserve" text-anchor="middle" x="62" y="-25.45" font-family="Arial" font-size="9.00" fill="#1a1a1a">(Value + Trend)</text>
 </g>
 <!-- WidgetBase&#45;&gt;MetricCard -->
 <g id="edge5" class="edge">
@@ -109,9 +109,9 @@
 <!-- HealthScore -->
 <g id="node7" class="node">
 <title>HealthScore</title>
-<path fill="#2c3e50" stroke="#2c3e50" d="M211.88,-52C211.88,-52 138.12,-52 138.12,-52 132.12,-52 126.12,-46 126.12,-40 126.12,-40 126.12,-28 126.12,-28 126.12,-22 132.12,-16 138.12,-16 138.12,-16 211.88,-16 211.88,-16 217.88,-16 223.88,-22 223.88,-28 223.88,-28 223.88,-40 223.88,-40 223.88,-46 217.88,-52 211.88,-52"/>
-<text xml:space="preserve" text-anchor="middle" x="175" y="-35.95" font-family="Arial" font-size="9.00">HealthScore Widget</text>
-<text xml:space="preserve" text-anchor="middle" x="175" y="-25.45" font-family="Arial" font-size="9.00">(1&#45;10 Circle)</text>
+<path fill="#e8f8f5" stroke="#2c3e50" d="M211.88,-52C211.88,-52 138.12,-52 138.12,-52 132.12,-52 126.12,-46 126.12,-40 126.12,-40 126.12,-28 126.12,-28 126.12,-22 132.12,-16 138.12,-16 138.12,-16 211.88,-16 211.88,-16 217.88,-16 223.88,-22 223.88,-28 223.88,-28 223.88,-40 223.88,-40 223.88,-46 217.88,-52 211.88,-52"/>
+<text xml:space="preserve" text-anchor="middle" x="175" y="-35.95" font-family="Arial" font-size="9.00" fill="#1a1a1a">HealthScore Widget</text>
+<text xml:space="preserve" text-anchor="middle" x="175" y="-25.45" font-family="Arial" font-size="9.00" fill="#1a1a1a">(1&#45;10 Circle)</text>
 </g>
 <!-- WidgetBase&#45;&gt;HealthScore -->
 <g id="edge6" class="edge">
@@ -122,9 +122,9 @@
 <!-- ProgressBar -->
 <g id="node8" class="node">
 <title>ProgressBar</title>
-<path fill="#2c3e50" stroke="#2c3e50" d="M327.88,-52C327.88,-52 254.12,-52 254.12,-52 248.12,-52 242.12,-46 242.12,-40 242.12,-40 242.12,-28 242.12,-28 242.12,-22 248.12,-16 254.12,-16 254.12,-16 327.88,-16 327.88,-16 333.88,-16 339.88,-22 339.88,-28 339.88,-28 339.88,-40 339.88,-40 339.88,-46 333.88,-52 327.88,-52"/>
-<text xml:space="preserve" text-anchor="middle" x="291" y="-35.95" font-family="Arial" font-size="9.00">ProgressBar Widget</text>
-<text xml:space="preserve" text-anchor="middle" x="291" y="-25.45" font-family="Arial" font-size="9.00">(Goal Progress)</text>
+<path fill="#e8f8f5" stroke="#2c3e50" d="M327.88,-52C327.88,-52 254.12,-52 254.12,-52 248.12,-52 242.12,-46 242.12,-40 242.12,-40 242.12,-28 242.12,-28 242.12,-22 248.12,-16 254.12,-16 254.12,-16 327.88,-16 327.88,-16 333.88,-16 339.88,-22 339.88,-28 339.88,-28 339.88,-40 339.88,-40 339.88,-46 333.88,-52 327.88,-52"/>
+<text xml:space="preserve" text-anchor="middle" x="291" y="-35.95" font-family="Arial" font-size="9.00" fill="#1a1a1a">ProgressBar Widget</text>
+<text xml:space="preserve" text-anchor="middle" x="291" y="-25.45" font-family="Arial" font-size="9.00" fill="#1a1a1a">(Goal Progress)</text>
 </g>
 <!-- WidgetBase&#45;&gt;ProgressBar -->
 <g id="edge7" class="edge">
@@ -135,9 +135,9 @@
 <!-- LineChart -->
 <g id="node9" class="node">
 <title>LineChart</title>
-<path fill="#2c3e50" stroke="#2c3e50" d="M451.62,-52C451.62,-52 376.38,-52 376.38,-52 370.38,-52 364.38,-46 364.38,-40 364.38,-40 364.38,-28 364.38,-28 364.38,-22 370.38,-16 376.38,-16 376.38,-16 451.62,-16 451.62,-16 457.62,-16 463.62,-22 463.62,-28 463.62,-28 463.62,-40 463.62,-40 463.62,-46 457.62,-52 451.62,-52"/>
-<text xml:space="preserve" text-anchor="middle" x="414" y="-35.95" font-family="Arial" font-size="9.00">LineChart Widget</text>
-<text xml:space="preserve" text-anchor="middle" x="414" y="-25.45" font-family="Arial" font-size="9.00">(Revenue, Forecast)</text>
+<path fill="#fef5e7" stroke="#2c3e50" d="M451.62,-52C451.62,-52 376.38,-52 376.38,-52 370.38,-52 364.38,-46 364.38,-40 364.38,-40 364.38,-28 364.38,-28 364.38,-22 370.38,-16 376.38,-16 376.38,-16 451.62,-16 451.62,-16 457.62,-16 463.62,-22 463.62,-28 463.62,-28 463.62,-40 463.62,-40 463.62,-46 457.62,-52 451.62,-52"/>
+<text xml:space="preserve" text-anchor="middle" x="414" y="-35.95" font-family="Arial" font-size="9.00" fill="#1a1a1a">LineChart Widget</text>
+<text xml:space="preserve" text-anchor="middle" x="414" y="-25.45" font-family="Arial" font-size="9.00" fill="#1a1a1a">(Revenue, Forecast)</text>
 </g>
 <!-- WidgetBase&#45;&gt;LineChart -->
 <g id="edge8" class="edge">
@@ -148,9 +148,9 @@
 <!-- PieChart -->
 <g id="node10" class="node">
 <title>PieChart</title>
-<path fill="#2c3e50" stroke="#2c3e50" d="M576.38,-52C576.38,-52 493.62,-52 493.62,-52 487.62,-52 481.62,-46 481.62,-40 481.62,-40 481.62,-28 481.62,-28 481.62,-22 487.62,-16 493.62,-16 493.62,-16 576.38,-16 576.38,-16 582.38,-16 588.38,-22 588.38,-28 588.38,-28 588.38,-40 588.38,-40 588.38,-46 582.38,-52 576.38,-52"/>
-<text xml:space="preserve" text-anchor="middle" x="535" y="-35.95" font-family="Arial" font-size="9.00">PieChart Widget</text>
-<text xml:space="preserve" text-anchor="middle" x="535" y="-25.45" font-family="Arial" font-size="9.00">(Expense Breakdown)</text>
+<path fill="#fef5e7" stroke="#2c3e50" d="M576.38,-52C576.38,-52 493.62,-52 493.62,-52 487.62,-52 481.62,-46 481.62,-40 481.62,-40 481.62,-28 481.62,-28 481.62,-22 487.62,-16 493.62,-16 493.62,-16 576.38,-16 576.38,-16 582.38,-16 588.38,-22 588.38,-28 588.38,-28 588.38,-40 588.38,-40 588.38,-46 582.38,-52 576.38,-52"/>
+<text xml:space="preserve" text-anchor="middle" x="535" y="-35.95" font-family="Arial" font-size="9.00" fill="#1a1a1a">PieChart Widget</text>
+<text xml:space="preserve" text-anchor="middle" x="535" y="-25.45" font-family="Arial" font-size="9.00" fill="#1a1a1a">(Expense Breakdown)</text>
 </g>
 <!-- WidgetBase&#45;&gt;PieChart -->
 <g id="edge9" class="edge">
@@ -161,9 +161,9 @@
 <!-- BarChart -->
 <g id="node11" class="node">
 <title>BarChart</title>
-<path fill="#2c3e50" stroke="#2c3e50" d="M677.75,-52C677.75,-52 618.25,-52 618.25,-52 612.25,-52 606.25,-46 606.25,-40 606.25,-40 606.25,-28 606.25,-28 606.25,-22 612.25,-16 618.25,-16 618.25,-16 677.75,-16 677.75,-16 683.75,-16 689.75,-22 689.75,-28 689.75,-28 689.75,-40 689.75,-40 689.75,-46 683.75,-52 677.75,-52"/>
-<text xml:space="preserve" text-anchor="middle" x="648" y="-35.95" font-family="Arial" font-size="9.00">BarChart Widget</text>
-<text xml:space="preserve" text-anchor="middle" x="648" y="-25.45" font-family="Arial" font-size="9.00">(Comparison)</text>
+<path fill="#fef5e7" stroke="#2c3e50" d="M677.75,-52C677.75,-52 618.25,-52 618.25,-52 612.25,-52 606.25,-46 606.25,-40 606.25,-40 606.25,-28 606.25,-28 606.25,-22 612.25,-16 618.25,-16 618.25,-16 677.75,-16 677.75,-16 683.75,-16 689.75,-22 689.75,-28 689.75,-28 689.75,-40 689.75,-40 689.75,-46 683.75,-52 677.75,-52"/>
+<text xml:space="preserve" text-anchor="middle" x="648" y="-35.95" font-family="Arial" font-size="9.00" fill="#1a1a1a">BarChart Widget</text>
+<text xml:space="preserve" text-anchor="middle" x="648" y="-25.45" font-family="Arial" font-size="9.00" fill="#1a1a1a">(Comparison)</text>
 </g>
 <!-- WidgetBase&#45;&gt;BarChart -->
 <g id="edge10" class="edge">
@@ -174,9 +174,9 @@
 <!-- TimelineChart -->
 <g id="node12" class="node">
 <title>TimelineChart</title>
-<path fill="#2c3e50" stroke="#2c3e50" d="M800.25,-52C800.25,-52 719.75,-52 719.75,-52 713.75,-52 707.75,-46 707.75,-40 707.75,-40 707.75,-28 707.75,-28 707.75,-22 713.75,-16 719.75,-16 719.75,-16 800.25,-16 800.25,-16 806.25,-16 812.25,-22 812.25,-28 812.25,-28 812.25,-40 812.25,-40 812.25,-46 806.25,-52 800.25,-52"/>
-<text xml:space="preserve" text-anchor="middle" x="760" y="-35.95" font-family="Arial" font-size="9.00">TimelineChart Widget</text>
-<text xml:space="preserve" text-anchor="middle" x="760" y="-25.45" font-family="Arial" font-size="9.00">(Milestones)</text>
+<path fill="#fef5e7" stroke="#2c3e50" d="M800.25,-52C800.25,-52 719.75,-52 719.75,-52 713.75,-52 707.75,-46 707.75,-40 707.75,-40 707.75,-28 707.75,-28 707.75,-22 713.75,-16 719.75,-16 719.75,-16 800.25,-16 800.25,-16 806.25,-16 812.25,-22 812.25,-28 812.25,-28 812.25,-40 812.25,-40 812.25,-46 806.25,-52 800.25,-52"/>
+<text xml:space="preserve" text-anchor="middle" x="760" y="-35.95" font-family="Arial" font-size="9.00" fill="#1a1a1a">TimelineChart Widget</text>
+<text xml:space="preserve" text-anchor="middle" x="760" y="-25.45" font-family="Arial" font-size="9.00" fill="#1a1a1a">(Milestones)</text>
 </g>
 <!-- WidgetBase&#45;&gt;TimelineChart -->
 <g id="edge11" class="edge">
@@ -187,9 +187,9 @@
 <!-- TableWidget -->
 <g id="node13" class="node">
 <title>TableWidget</title>
-<path fill="#2c3e50" stroke="#2c3e50" d="M933.5,-52C933.5,-52 848.5,-52 848.5,-52 842.5,-52 836.5,-46 836.5,-40 836.5,-40 836.5,-28 836.5,-28 836.5,-22 842.5,-16 848.5,-16 848.5,-16 933.5,-16 933.5,-16 939.5,-16 945.5,-22 945.5,-28 945.5,-28 945.5,-40 945.5,-40 945.5,-46 939.5,-52 933.5,-52"/>
-<text xml:space="preserve" text-anchor="middle" x="891" y="-35.95" font-family="Arial" font-size="9.00">Table Widget</text>
-<text xml:space="preserve" text-anchor="middle" x="891" y="-25.45" font-family="Arial" font-size="9.00">(Inventory, Employees)</text>
+<path fill="#f4ecf7" stroke="#2c3e50" d="M933.5,-52C933.5,-52 848.5,-52 848.5,-52 842.5,-52 836.5,-46 836.5,-40 836.5,-40 836.5,-28 836.5,-28 836.5,-22 842.5,-16 848.5,-16 848.5,-16 933.5,-16 933.5,-16 939.5,-16 945.5,-22 945.5,-28 945.5,-28 945.5,-40 945.5,-40 945.5,-46 939.5,-52 933.5,-52"/>
+<text xml:space="preserve" text-anchor="middle" x="891" y="-35.95" font-family="Arial" font-size="9.00" fill="#1a1a1a">Table Widget</text>
+<text xml:space="preserve" text-anchor="middle" x="891" y="-25.45" font-family="Arial" font-size="9.00" fill="#1a1a1a">(Inventory, Employees)</text>
 </g>
 <!-- WidgetBase&#45;&gt;TableWidget -->
 <g id="edge12" class="edge">
@@ -200,9 +200,9 @@
 <!-- ListWidget -->
 <g id="node14" class="node">
 <title>ListWidget</title>
-<path fill="#2c3e50" stroke="#2c3e50" d="M1028.75,-52C1028.75,-52 975.25,-52 975.25,-52 969.25,-52 963.25,-46 963.25,-40 963.25,-40 963.25,-28 963.25,-28 963.25,-22 969.25,-16 975.25,-16 975.25,-16 1028.75,-16 1028.75,-16 1034.75,-16 1040.75,-22 1040.75,-28 1040.75,-28 1040.75,-40 1040.75,-40 1040.75,-46 1034.75,-52 1028.75,-52"/>
-<text xml:space="preserve" text-anchor="middle" x="1002" y="-35.95" font-family="Arial" font-size="9.00">List Widget</text>
-<text xml:space="preserve" text-anchor="middle" x="1002" y="-25.45" font-family="Arial" font-size="9.00">(Orders, Alerts)</text>
+<path fill="#f4ecf7" stroke="#2c3e50" d="M1028.75,-52C1028.75,-52 975.25,-52 975.25,-52 969.25,-52 963.25,-46 963.25,-40 963.25,-40 963.25,-28 963.25,-28 963.25,-22 969.25,-16 975.25,-16 975.25,-16 1028.75,-16 1028.75,-16 1034.75,-16 1040.75,-22 1040.75,-28 1040.75,-28 1040.75,-40 1040.75,-40 1040.75,-46 1034.75,-52 1028.75,-52"/>
+<text xml:space="preserve" text-anchor="middle" x="1002" y="-35.95" font-family="Arial" font-size="9.00" fill="#1a1a1a">List Widget</text>
+<text xml:space="preserve" text-anchor="middle" x="1002" y="-25.45" font-family="Arial" font-size="9.00" fill="#1a1a1a">(Orders, Alerts)</text>
 </g>
 <!-- WidgetBase&#45;&gt;ListWidget -->
 <g id="edge13" class="edge">
@@ -213,9 +213,9 @@
 <!-- CardGrid -->
 <g id="node15" class="node">
 <title>CardGrid</title>
-<path fill="#2c3e50" stroke="#2c3e50" d="M1131.12,-52C1131.12,-52 1070.88,-52 1070.88,-52 1064.88,-52 1058.88,-46 1058.88,-40 1058.88,-40 1058.88,-28 1058.88,-28 1058.88,-22 1064.88,-16 1070.88,-16 1070.88,-16 1131.12,-16 1131.12,-16 1137.12,-16 1143.12,-22 1143.12,-28 1143.12,-28 1143.12,-40 1143.12,-40 1143.12,-46 1137.12,-52 1131.12,-52"/>
-<text xml:space="preserve" text-anchor="middle" x="1101" y="-35.95" font-family="Arial" font-size="9.00">CardGrid Widget</text>
-<text xml:space="preserve" text-anchor="middle" x="1101" y="-25.45" font-family="Arial" font-size="9.00">(Cards in Grid)</text>
+<path fill="#f4ecf7" stroke="#2c3e50" d="M1131.12,-52C1131.12,-52 1070.88,-52 1070.88,-52 1064.88,-52 1058.88,-46 1058.88,-40 1058.88,-40 1058.88,-28 1058.88,-28 1058.88,-22 1064.88,-16 1070.88,-16 1070.88,-16 1131.12,-16 1131.12,-16 1137.12,-16 1143.12,-22 1143.12,-28 1143.12,-28 1143.12,-40 1143.12,-40 1143.12,-46 1137.12,-52 1131.12,-52"/>
+<text xml:space="preserve" text-anchor="middle" x="1101" y="-35.95" font-family="Arial" font-size="9.00" fill="#1a1a1a">CardGrid Widget</text>
+<text xml:space="preserve" text-anchor="middle" x="1101" y="-25.45" font-family="Arial" font-size="9.00" fill="#1a1a1a">(Cards in Grid)</text>
 </g>
 <!-- WidgetBase&#45;&gt;CardGrid -->
 <g id="edge14" class="edge">
@@ -226,9 +226,9 @@
 <!-- ChecklistWidget -->
 <g id="node16" class="node">
 <title>ChecklistWidget</title>
-<path fill="#2c3e50" stroke="#2c3e50" d="M1239.12,-52C1239.12,-52 1178.88,-52 1178.88,-52 1172.88,-52 1166.88,-46 1166.88,-40 1166.88,-40 1166.88,-28 1166.88,-28 1166.88,-22 1172.88,-16 1178.88,-16 1178.88,-16 1239.12,-16 1239.12,-16 1245.12,-16 1251.12,-22 1251.12,-28 1251.12,-28 1251.12,-40 1251.12,-40 1251.12,-46 1245.12,-52 1239.12,-52"/>
-<text xml:space="preserve" text-anchor="middle" x="1209" y="-35.95" font-family="Arial" font-size="9.00">Checklist Widget</text>
-<text xml:space="preserve" text-anchor="middle" x="1209" y="-25.45" font-family="Arial" font-size="9.00">(Tasks)</text>
+<path fill="#e8f4f8" stroke="#2c3e50" d="M1239.12,-52C1239.12,-52 1178.88,-52 1178.88,-52 1172.88,-52 1166.88,-46 1166.88,-40 1166.88,-40 1166.88,-28 1166.88,-28 1166.88,-22 1172.88,-16 1178.88,-16 1178.88,-16 1239.12,-16 1239.12,-16 1245.12,-16 1251.12,-22 1251.12,-28 1251.12,-28 1251.12,-40 1251.12,-40 1251.12,-46 1245.12,-52 1239.12,-52"/>
+<text xml:space="preserve" text-anchor="middle" x="1209" y="-35.95" font-family="Arial" font-size="9.00" fill="#1a1a1a">Checklist Widget</text>
+<text xml:space="preserve" text-anchor="middle" x="1209" y="-25.45" font-family="Arial" font-size="9.00" fill="#1a1a1a">(Tasks)</text>
 </g>
 <!-- WidgetBase&#45;&gt;ChecklistWidget -->
 <g id="edge15" class="edge">
@@ -239,9 +239,9 @@
 <!-- FormWidget -->
 <g id="node17" class="node">
 <title>FormWidget</title>
-<path fill="#2c3e50" stroke="#2c3e50" d="M1326.62,-52C1326.62,-52 1281.38,-52 1281.38,-52 1275.38,-52 1269.38,-46 1269.38,-40 1269.38,-40 1269.38,-28 1269.38,-28 1269.38,-22 1275.38,-16 1281.38,-16 1281.38,-16 1326.62,-16 1326.62,-16 1332.62,-16 1338.62,-22 1338.62,-28 1338.62,-28 1338.62,-40 1338.62,-40 1338.62,-46 1332.62,-52 1326.62,-52"/>
-<text xml:space="preserve" text-anchor="middle" x="1304" y="-35.95" font-family="Arial" font-size="9.00">Form Widget</text>
-<text xml:space="preserve" text-anchor="middle" x="1304" y="-25.45" font-family="Arial" font-size="9.00">(Input Fields)</text>
+<path fill="#e8f4f8" stroke="#2c3e50" d="M1326.62,-52C1326.62,-52 1281.38,-52 1281.38,-52 1275.38,-52 1269.38,-46 1269.38,-40 1269.38,-40 1269.38,-28 1269.38,-28 1269.38,-22 1275.38,-16 1281.38,-16 1281.38,-16 1326.62,-16 1326.62,-16 1332.62,-16 1338.62,-22 1338.62,-28 1338.62,-28 1338.62,-40 1338.62,-40 1338.62,-46 1332.62,-52 1326.62,-52"/>
+<text xml:space="preserve" text-anchor="middle" x="1304" y="-35.95" font-family="Arial" font-size="9.00" fill="#1a1a1a">Form Widget</text>
+<text xml:space="preserve" text-anchor="middle" x="1304" y="-25.45" font-family="Arial" font-size="9.00" fill="#1a1a1a">(Input Fields)</text>
 </g>
 <!-- WidgetBase&#45;&gt;FormWidget -->
 <g id="edge16" class="edge">
@@ -252,9 +252,9 @@
 <!-- TabsWidget -->
 <g id="node18" class="node">
 <title>TabsWidget</title>
-<path fill="#2c3e50" stroke="#2c3e50" d="M1427.75,-52C1427.75,-52 1368.25,-52 1368.25,-52 1362.25,-52 1356.25,-46 1356.25,-40 1356.25,-40 1356.25,-28 1356.25,-28 1356.25,-22 1362.25,-16 1368.25,-16 1368.25,-16 1427.75,-16 1427.75,-16 1433.75,-16 1439.75,-22 1439.75,-28 1439.75,-28 1439.75,-40 1439.75,-40 1439.75,-46 1433.75,-52 1427.75,-52"/>
-<text xml:space="preserve" text-anchor="middle" x="1398" y="-35.95" font-family="Arial" font-size="9.00">Tabs Widget</text>
-<text xml:space="preserve" text-anchor="middle" x="1398" y="-25.45" font-family="Arial" font-size="9.00">(Tab Navigation)</text>
+<path fill="#e8f4f8" stroke="#2c3e50" d="M1427.75,-52C1427.75,-52 1368.25,-52 1368.25,-52 1362.25,-52 1356.25,-46 1356.25,-40 1356.25,-40 1356.25,-28 1356.25,-28 1356.25,-22 1362.25,-16 1368.25,-16 1368.25,-16 1427.75,-16 1427.75,-16 1433.75,-16 1439.75,-22 1439.75,-28 1439.75,-28 1439.75,-40 1439.75,-40 1439.75,-46 1433.75,-52 1427.75,-52"/>
+<text xml:space="preserve" text-anchor="middle" x="1398" y="-35.95" font-family="Arial" font-size="9.00" fill="#1a1a1a">Tabs Widget</text>
+<text xml:space="preserve" text-anchor="middle" x="1398" y="-25.45" font-family="Arial" font-size="9.00" fill="#1a1a1a">(Tab Navigation)</text>
 </g>
 <!-- WidgetBase&#45;&gt;TabsWidget -->
 <g id="edge17" class="edge">
@@ -265,9 +265,9 @@
 <!-- ButtonGroup -->
 <g id="node19" class="node">
 <title>ButtonGroup</title>
-<path fill="#2c3e50" stroke="#2c3e50" d="M1544.25,-52C1544.25,-52 1469.75,-52 1469.75,-52 1463.75,-52 1457.75,-46 1457.75,-40 1457.75,-40 1457.75,-28 1457.75,-28 1457.75,-22 1463.75,-16 1469.75,-16 1469.75,-16 1544.25,-16 1544.25,-16 1550.25,-16 1556.25,-22 1556.25,-28 1556.25,-28 1556.25,-40 1556.25,-40 1556.25,-46 1550.25,-52 1544.25,-52"/>
-<text xml:space="preserve" text-anchor="middle" x="1507" y="-35.95" font-family="Arial" font-size="9.00">ButtonGroup Widget</text>
-<text xml:space="preserve" text-anchor="middle" x="1507" y="-25.45" font-family="Arial" font-size="9.00">(Actions)</text>
+<path fill="#e8f4f8" stroke="#2c3e50" d="M1544.25,-52C1544.25,-52 1469.75,-52 1469.75,-52 1463.75,-52 1457.75,-46 1457.75,-40 1457.75,-40 1457.75,-28 1457.75,-28 1457.75,-22 1463.75,-16 1469.75,-16 1469.75,-16 1544.25,-16 1544.25,-16 1550.25,-16 1556.25,-22 1556.25,-28 1556.25,-28 1556.25,-40 1556.25,-40 1556.25,-46 1550.25,-52 1544.25,-52"/>
+<text xml:space="preserve" text-anchor="middle" x="1507" y="-35.95" font-family="Arial" font-size="9.00" fill="#1a1a1a">ButtonGroup Widget</text>
+<text xml:space="preserve" text-anchor="middle" x="1507" y="-25.45" font-family="Arial" font-size="9.00" fill="#1a1a1a">(Actions)</text>
 </g>
 <!-- WidgetBase&#45;&gt;ButtonGroup -->
 <g id="edge18" class="edge">
@@ -278,9 +278,9 @@
 <!-- AlarmCard -->
 <g id="node20" class="node">
 <title>AlarmCard</title>
-<path fill="#2c3e50" stroke="#2c3e50" d="M1659.5,-52C1659.5,-52 1592.5,-52 1592.5,-52 1586.5,-52 1580.5,-46 1580.5,-40 1580.5,-40 1580.5,-28 1580.5,-28 1580.5,-22 1586.5,-16 1592.5,-16 1592.5,-16 1659.5,-16 1659.5,-16 1665.5,-16 1671.5,-22 1671.5,-28 1671.5,-28 1671.5,-40 1671.5,-40 1671.5,-46 1665.5,-52 1659.5,-52"/>
-<text xml:space="preserve" text-anchor="middle" x="1626" y="-35.95" font-family="Arial" font-size="9.00">AlarmCard Widget</text>
-<text xml:space="preserve" text-anchor="middle" x="1626" y="-25.45" font-family="Arial" font-size="9.00">(Alert + Action)</text>
+<path fill="#f3e5f5" stroke="#2c3e50" d="M1659.5,-52C1659.5,-52 1592.5,-52 1592.5,-52 1586.5,-52 1580.5,-46 1580.5,-40 1580.5,-40 1580.5,-28 1580.5,-28 1580.5,-22 1586.5,-16 1592.5,-16 1592.5,-16 1659.5,-16 1659.5,-16 1665.5,-16 1671.5,-22 1671.5,-28 1671.5,-28 1671.5,-40 1671.5,-40 1671.5,-46 1665.5,-52 1659.5,-52"/>
+<text xml:space="preserve" text-anchor="middle" x="1626" y="-35.95" font-family="Arial" font-size="9.00" fill="#1a1a1a">AlarmCard Widget</text>
+<text xml:space="preserve" text-anchor="middle" x="1626" y="-25.45" font-family="Arial" font-size="9.00" fill="#1a1a1a">(Alert + Action)</text>
 </g>
 <!-- WidgetBase&#45;&gt;AlarmCard -->
 <g id="edge19" class="edge">
@@ -291,9 +291,9 @@
 <!-- RecommendWidget -->
 <g id="node21" class="node">
 <title>RecommendWidget</title>
-<path fill="#2c3e50" stroke="#2c3e50" d="M1780.88,-52C1780.88,-52 1701.12,-52 1701.12,-52 1695.12,-52 1689.12,-46 1689.12,-40 1689.12,-40 1689.12,-28 1689.12,-28 1689.12,-22 1695.12,-16 1701.12,-16 1701.12,-16 1780.88,-16 1780.88,-16 1786.88,-16 1792.88,-22 1792.88,-28 1792.88,-28 1792.88,-40 1792.88,-40 1792.88,-46 1786.88,-52 1780.88,-52"/>
-<text xml:space="preserve" text-anchor="middle" x="1741" y="-35.95" font-family="Arial" font-size="9.00">Recommend Widget</text>
-<text xml:space="preserve" text-anchor="middle" x="1741" y="-25.45" font-family="Arial" font-size="9.00">(Rec. + Why + Action)</text>
+<path fill="#f3e5f5" stroke="#2c3e50" d="M1780.88,-52C1780.88,-52 1701.12,-52 1701.12,-52 1695.12,-52 1689.12,-46 1689.12,-40 1689.12,-40 1689.12,-28 1689.12,-28 1689.12,-22 1695.12,-16 1701.12,-16 1701.12,-16 1780.88,-16 1780.88,-16 1786.88,-16 1792.88,-22 1792.88,-28 1792.88,-28 1792.88,-40 1792.88,-40 1792.88,-46 1786.88,-52 1780.88,-52"/>
+<text xml:space="preserve" text-anchor="middle" x="1741" y="-35.95" font-family="Arial" font-size="9.00" fill="#1a1a1a">Recommend Widget</text>
+<text xml:space="preserve" text-anchor="middle" x="1741" y="-25.45" font-family="Arial" font-size="9.00" fill="#1a1a1a">(Rec. + Why + Action)</text>
 </g>
 <!-- WidgetBase&#45;&gt;RecommendWidget -->
 <g id="edge20" class="edge">
@@ -304,9 +304,9 @@
 <!-- GoalCard -->
 <g id="node22" class="node">
 <title>GoalCard</title>
-<path fill="#2c3e50" stroke="#2c3e50" d="M1931.5,-52C1931.5,-52 1822.5,-52 1822.5,-52 1816.5,-52 1810.5,-46 1810.5,-40 1810.5,-40 1810.5,-28 1810.5,-28 1810.5,-22 1816.5,-16 1822.5,-16 1822.5,-16 1931.5,-16 1931.5,-16 1937.5,-16 1943.5,-22 1943.5,-28 1943.5,-28 1943.5,-40 1943.5,-40 1943.5,-46 1937.5,-52 1931.5,-52"/>
-<text xml:space="preserve" text-anchor="middle" x="1877" y="-35.95" font-family="Arial" font-size="9.00">GoalCard Widget</text>
-<text xml:space="preserve" text-anchor="middle" x="1877" y="-25.45" font-family="Arial" font-size="9.00">(Goal + Progress + Timeline)</text>
+<path fill="#f3e5f5" stroke="#2c3e50" d="M1931.5,-52C1931.5,-52 1822.5,-52 1822.5,-52 1816.5,-52 1810.5,-46 1810.5,-40 1810.5,-40 1810.5,-28 1810.5,-28 1810.5,-22 1816.5,-16 1822.5,-16 1822.5,-16 1931.5,-16 1931.5,-16 1937.5,-16 1943.5,-22 1943.5,-28 1943.5,-28 1943.5,-40 1943.5,-40 1943.5,-46 1937.5,-52 1931.5,-52"/>
+<text xml:space="preserve" text-anchor="middle" x="1877" y="-35.95" font-family="Arial" font-size="9.00" fill="#1a1a1a">GoalCard Widget</text>
+<text xml:space="preserve" text-anchor="middle" x="1877" y="-25.45" font-family="Arial" font-size="9.00" fill="#1a1a1a">(Goal + Progress + Timeline)</text>
 </g>
 <!-- WidgetBase&#45;&gt;GoalCard -->
 <g id="edge21" class="edge">

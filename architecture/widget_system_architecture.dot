@@ -1,7 +1,7 @@
 digraph WidgetSystemArchitecture {
   rankdir=TB;
   bgcolor="#f8f9fa";
-  node [shape=box, style="rounded,filled", color="#2c3e50", fontname="Arial", fontsize=9];
+  node [shape=box, style="rounded,filled", color="#2c3e50", fontname="Arial", fontsize=9, fontcolor="#1a1a1a", fillcolor="#ffffff"];
   edge [color="#34495e", fontsize=8];
 
   // Widget System Layer
@@ -21,9 +21,9 @@ digraph WidgetSystemArchitecture {
     fillcolor = "#e8f8f5";
     color = "#2c3e50";
     
-    MetricCard [label="MetricCard Widget\n(Value + Trend)"];
-    HealthScore [label="HealthScore Widget\n(1-10 Circle)"];
-    ProgressBar [label="ProgressBar Widget\n(Goal Progress)"];
+    MetricCard [label="MetricCard Widget\n(Value + Trend)", fillcolor="#e8f8f5", fontcolor="#1a1a1a"];
+    HealthScore [label="HealthScore Widget\n(1-10 Circle)", fillcolor="#e8f8f5", fontcolor="#1a1a1a"];
+    ProgressBar [label="ProgressBar Widget\n(Goal Progress)", fillcolor="#e8f8f5", fontcolor="#1a1a1a"];
   }
 
   subgraph cluster_chart_widgets {
@@ -32,10 +32,10 @@ digraph WidgetSystemArchitecture {
     fillcolor = "#fef5e7";
     color = "#2c3e50";
     
-    LineChart [label="LineChart Widget\n(Revenue, Forecast)"];
-    PieChart [label="PieChart Widget\n(Expense Breakdown)"];
-    BarChart [label="BarChart Widget\n(Comparison)"];
-    TimelineChart [label="TimelineChart Widget\n(Milestones)"];
+    LineChart [label="LineChart Widget\n(Revenue, Forecast)", fillcolor="#fef5e7", fontcolor="#1a1a1a"];
+    PieChart [label="PieChart Widget\n(Expense Breakdown)", fillcolor="#fef5e7", fontcolor="#1a1a1a"];
+    BarChart [label="BarChart Widget\n(Comparison)", fillcolor="#fef5e7", fontcolor="#1a1a1a"];
+    TimelineChart [label="TimelineChart Widget\n(Milestones)", fillcolor="#fef5e7", fontcolor="#1a1a1a"];
   }
 
   subgraph cluster_data_widgets {
@@ -44,9 +44,9 @@ digraph WidgetSystemArchitecture {
     fillcolor = "#f4ecf7";
     color = "#2c3e50";
     
-    TableWidget [label="Table Widget\n(Inventory, Employees)"];
-    ListWidget [label="List Widget\n(Orders, Alerts)"];
-    CardGrid [label="CardGrid Widget\n(Cards in Grid)"];
+    TableWidget [label="Table Widget\n(Inventory, Employees)", fillcolor="#f4ecf7", fontcolor="#1a1a1a"];
+    ListWidget [label="List Widget\n(Orders, Alerts)", fillcolor="#f4ecf7", fontcolor="#1a1a1a"];
+    CardGrid [label="CardGrid Widget\n(Cards in Grid)", fillcolor="#f4ecf7", fontcolor="#1a1a1a"];
   }
 
   subgraph cluster_interaction_widgets {
@@ -55,10 +55,10 @@ digraph WidgetSystemArchitecture {
     fillcolor = "#e8f4f8";
     color = "#2c3e50";
     
-    ChecklistWidget [label="Checklist Widget\n(Tasks)"];
-    FormWidget [label="Form Widget\n(Input Fields)"];
-    TabsWidget [label="Tabs Widget\n(Tab Navigation)"];
-    ButtonGroup [label="ButtonGroup Widget\n(Actions)"];
+    ChecklistWidget [label="Checklist Widget\n(Tasks)", fillcolor="#e8f4f8", fontcolor="#1a1a1a"];
+    FormWidget [label="Form Widget\n(Input Fields)", fillcolor="#e8f4f8", fontcolor="#1a1a1a"];
+    TabsWidget [label="Tabs Widget\n(Tab Navigation)", fillcolor="#e8f4f8", fontcolor="#1a1a1a"];
+    ButtonGroup [label="ButtonGroup Widget\n(Actions)", fillcolor="#e8f4f8", fontcolor="#1a1a1a"];
   }
 
   subgraph cluster_composite_widgets {
@@ -67,9 +67,9 @@ digraph WidgetSystemArchitecture {
     fillcolor = "#f3e5f5";
     color = "#2c3e50";
     
-    AlarmCard [label="AlarmCard Widget\n(Alert + Action)"];
-    RecommendWidget [label="Recommend Widget\n(Rec. + Why + Action)"];
-    GoalCard [label="GoalCard Widget\n(Goal + Progress + Timeline)"];
+    AlarmCard [label="AlarmCard Widget\n(Alert + Action)", fillcolor="#f3e5f5", fontcolor="#1a1a1a"];
+    RecommendWidget [label="Recommend Widget\n(Rec. + Why + Action)", fillcolor="#f3e5f5", fontcolor="#1a1a1a"];
+    GoalCard [label="GoalCard Widget\n(Goal + Progress + Timeline)", fillcolor="#f3e5f5", fontcolor="#1a1a1a"];
   }
 
   WidgetBase -> {MetricCard, HealthScore, ProgressBar, LineChart, PieChart, BarChart, TimelineChart, TableWidget, ListWidget, CardGrid, ChecklistWidget, FormWidget, TabsWidget, ButtonGroup, AlarmCard, RecommendWidget, GoalCard};
