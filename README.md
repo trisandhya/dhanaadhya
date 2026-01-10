@@ -1,5 +1,41 @@
-# dhanaadhya
+# Dhanaadhya
+
 **MSME Business Simulation & Operational Guide**
+
+---
+
+## 🎯 Mission Statement
+
+> **Dhanaadhya empowers business owners to make smarter, faster decisions by turning their business data into visual insights and actionable intelligence.**
+
+---
+
+## 📋 Objectives & Purpose
+
+**Core Purpose**: Assist business owners (existing and new) to:
+
+1. **Visualize** their business holistically
+   - Real-time dashboards with key metrics and trends
+   - Performance against benchmarks and goals
+   - Financial health at a glance
+
+2. **Understand** what's working and what's not
+   - Data-driven insights and analytics
+   - Trend analysis and forecasting
+   - Industry-specific recommendations
+
+3. **Share** insights with stakeholders
+   - Exportable reports and visualizations
+   - Scenario simulations and business planning
+   - Clear communication of business status
+
+4. **Make Decisions** faster and smarter
+   - What-if scenario simulations
+   - Decision impact analysis
+   - Daily/weekly/monthly action priorities
+   - Risk assessment and mitigation
+
+---
 
 ## Problem We're Solving
 
