@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Mail, Lock, User, Building2, Eye, EyeOff, CheckCircle } from 'lucide-react'
-import { MSME_CATEGORIES, BUSINESS_CATEGORIES_GROUPED } from '../constants/businessCategories'
+import { BUSINESS_CATEGORIES_GROUPED } from '../constants/businessCategories'
+import { useAuth } from '@store/AuthContext'
 
 /**
  * Registration Page
- * New user sign up
+ * New user sign up with session data only
  */
 export default function RegistrationPage() {
   const navigate = useNavigate()
+  const { register } = useAuth()
   const [showPassword, setShowPassword] = useState(false)
   const [formData, setFormData] = useState({
     fullName: '',
@@ -54,11 +56,15 @@ export default function RegistrationPage() {
 
     // Simulate registration delay
     setTimeout(() => {
-      localStorage.setItem('authToken', 'mock_token_' + Date.now())
-      localStorage.setItem('userName', formData.fullName.split(' ')[0])
-      localStorage.setItem('businessName', formData.businessName)
-      setLoading(false)
-      navigate('/dashboard')
+      try {
+        // Register with session data only
+        register(formData)
+        setLoading(false)
+        navigate('/dashboard')
+      } catch (err) {
+        setError(err.message || 'Registration failed')
+        setLoading(false)
+      }
     }, 1000)
   }
 

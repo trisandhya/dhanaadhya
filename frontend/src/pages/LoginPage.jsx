@@ -1,14 +1,18 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { Mail, Lock, Eye, EyeOff, Building2 } from 'lucide-react'
-import { MSME_CATEGORIES, BUSINESS_CATEGORIES_GROUPED } from '../constants/businessCategories'
+import { Mail, Lock, Eye, EyeOff } from 'lucide-react'
+import { BUSINESS_CATEGORIES_GROUPED } from '../constants/businessCategories'
+import { useAuth } from '@store/AuthContext'
+import { GoogleLoginButton, MicrosoftLoginButton } from '@components/OAuthButtons'
 
 /**
  * Login Page
- * User authentication
+ * User authentication with session data only
+ * Supports traditional email/password and OAuth (Google/Microsoft)
  */
 export default function LoginPage() {
   const navigate = useNavigate()
+  const { login } = useAuth()
   const [showPassword, setShowPassword] = useState(false)
   const [email, setEmail] = useState('raj@msme.com')
   const [password, setPassword] = useState('demo123')
@@ -23,14 +27,20 @@ export default function LoginPage() {
 
     // Simulate login delay
     setTimeout(() => {
-      // Mock authentication - in real app, validate with backend
-      if (email && password) {
-        localStorage.setItem('authToken', 'mock_token_' + Date.now())
-        localStorage.setItem('userName', email.split('@')[0])
+      try {
+        // Validate inputs
+        if (!email || !password) {
+          setError('Please enter both email and password')
+          setLoading(false)
+          return
+        }
+
+        // Login with session data only
+        login(email, password)
         setLoading(false)
         navigate('/dashboard')
-      } else {
-        setError('Please enter both email and password')
+      } catch (err) {
+        setError(err.message || 'Login failed')
         setLoading(false)
       }
     }, 800)
@@ -92,6 +102,19 @@ export default function LoginPage() {
               <p className="text-red-700 text-sm font-medium">{error}</p>
             </div>
           )}
+
+          {/* OAuth Login Options */}
+          <div className="space-y-3 mb-8">
+            <GoogleLoginButton disabled={loading} />
+            <MicrosoftLoginButton disabled={loading} />
+          </div>
+
+          {/* Divider */}
+          <div className="flex items-center gap-4 mb-8">
+            <div className="flex-1 border-t border-gray-200"></div>
+            <span className="text-sm text-gray-500 font-medium">Or continue with email</span>
+            <div className="flex-1 border-t border-gray-200"></div>
+          </div>
 
           <form onSubmit={handleLogin} className="space-y-6">
             {/* Email Input */}

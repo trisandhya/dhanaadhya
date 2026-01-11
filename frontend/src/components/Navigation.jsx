@@ -1,12 +1,22 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Menu, X, LogOut } from 'lucide-react'
+import { useAuth } from '@store/AuthContext'
 
 /**
  * Top Navigation Bar
  */
 export const Navbar = ({ userName = 'User' }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const { user, logout } = useAuth()
+  const navigate = useNavigate()
+
+  const handleLogout = () => {
+    logout()
+    navigate('/login')
+  }
+
+  const displayName = user?.fullName || user?.displayName || userName
 
   return (
     <nav className="sticky top-0 z-40 bg-white border-b border-gray-200 shadow-sm">
@@ -31,9 +41,13 @@ export const Navbar = ({ userName = 'User' }) => {
           <div className="flex items-center gap-4">
             <div className="hidden sm:flex items-center gap-2">
               <Link to="/profile" className="text-sm text-gray-700 hover:text-gray-900 font-medium">
-                {userName}
+                {displayName}
               </Link>
-              <button className="p-2 hover:bg-gray-100 rounded-lg">
+              <button 
+                onClick={handleLogout}
+                className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                title="Logout"
+              >
                 <LogOut className="w-5 h-5 text-gray-600" />
               </button>
             </div>
@@ -57,6 +71,13 @@ export const Navbar = ({ userName = 'User' }) => {
             <Link to="/analytics" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded">Analytics</Link>
             <Link to="/focus-guide" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded">Focus Guide</Link>
             <Link to="/profile" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded">Profile</Link>
+            <button
+              onClick={handleLogout}
+              className="w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-50 rounded flex items-center gap-2"
+            >
+              <LogOut className="w-4 h-4" />
+              Logout
+            </button>
           </div>
         )}
       </div>
