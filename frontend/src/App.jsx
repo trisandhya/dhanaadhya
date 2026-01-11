@@ -19,17 +19,15 @@ function App() {
   return (
     <BrowserRouter basename="/dhanaadhya/" future={{ v7_startTransition: true }}>
       <div className="min-h-screen flex flex-col bg-gray-50">
-        {/* Show Navbar only on authenticated pages */}
         <Routes>
-          <Route path="/" element={
-            <>
-              <Navbar userName="Raj Patel" />
-              <main className="flex-1"><HomePage /></main>
-              <Footer />
-            </>
-          } />
+          {/* Home page - standalone with its own header and footer */}
+          <Route path="/" element={<HomePage />} />
+          
+          {/* Auth pages - standalone */}
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegistrationPage />} />
+          
+          {/* Authenticated pages with navbar and footer */}
           <Route path="/dashboard" element={
             <>
               <Navbar userName="Raj Patel" />
