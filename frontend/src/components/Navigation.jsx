@@ -20,6 +20,7 @@ export const Navbar = ({ userName = 'User' }) => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
+            <Link to="/" className="text-gray-600 hover:text-gray-900 text-sm font-medium">Home</Link>
             <Link to="/dashboard" className="text-gray-600 hover:text-gray-900 text-sm font-medium">Dashboard</Link>
             <Link to="/simulation" className="text-gray-600 hover:text-gray-900 text-sm font-medium">Simulation</Link>
             <Link to="/analytics" className="text-gray-600 hover:text-gray-900 text-sm font-medium">Analytics</Link>
@@ -50,6 +51,7 @@ export const Navbar = ({ userName = 'User' }) => {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden pb-4 space-y-2">
+            <Link to="/" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded">Home</Link>
             <Link to="/dashboard" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded">Dashboard</Link>
             <Link to="/simulation" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded">Simulation</Link>
             <Link to="/analytics" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded">Analytics</Link>
